@@ -1,0 +1,150 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Search
+{% endblock %}
+
+{% block main %}
+
+
+<div class = "row">
+
+<div class = "column left">
+    <form action="/" method="post" id="search-form">
+        <h4>Search</h4>
+        <br>
+        Title: <input type="text" name="title">
+        <br><br>
+        <label for="composer">Composer:</label>
+        <select name="composer" id="composer">
+            <option disabled selected></option>
+            {% for composer in composers %}
+                <option value="{{ composer }}">{{ composer }}</option>
+            {% endfor %}
+        </select>
+        <br><br>
+        Born between <input type="text" name="min_birth" pattern="\d*" maxlength="4" size="4"> and <input type="text" name="max_birth" pattern="\d*" maxlength="4" size="4">
+        <br><br>
+        Died between <input type="text" name="min_death" pattern="\d*" maxlength="4" size="4"> and <input type="text" name="max_death" pattern="\d*" maxlength="4" size="4">
+        <br><br>
+        <label for="epoch">Epoch:</label>
+        <select name="epoch" id="epoch">
+            <option disabled selected></option>
+            {% for epoch in epochs %}
+                <option value="{{ epoch }}">{{ epoch }}</option>
+            {% endfor %}
+        </select>
+        <br><br>
+        <label for="form">Form:</label>
+        <select name="form" id="form">
+            <option disabled selected></option>
+            {% for form in forms %}
+                <option value="{{ form }}">{{ form }}</option>
+            {% endfor %}
+        </select>
+        <br><br>
+        <label for="instr">Instrumentation:</label>
+        <select name="instr" id="instr">
+            <option disabled selected></option>
+            {% for i in instr %}
+                <option value="{{ i }}">{{ i }}</option>
+            {% endfor %}
+        </select>
+        <br><br>
+        <button class="btn btn-primary" type="submit">Search</button>
+    </form>
+</div>
+
+<div class = "column right">
+    {% if no_input %}
+        <div class="error">
+            Invalid search.
+        </div>
+    {% endif %}
+    <br><br>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th class="text-start">Composer</th>
+                <th class="text-start">Title</th>
+                <th class="text-start">Form</th>
+                <th class="text-start">Instrumentation</th>
+                <th class="text-end"></th>
+            </tr>
+        </thead>
+       <tbody>
+            {% for i in range(list|length) %}
+                <tr>
+                    <td class="text-start">{{ composer_results[i] }}</td>
+                    <td class="text-start">{{ list[i]["name"] }}</td>
+                    <td class="text-start">{{ list[i]["form"] }}</td>
+                    <td class="text-start">
+                        {% if list[i]["solo"] == '1' %}
+                            Violin
+                        {% else %}
+                            Violin and Piano
+                        {% endif %}
+                        </td>
+                    <td class="text-end">
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <br><br>
+
+    <form action="/addfavorite" method="post">
+        <label for="favorites">Add favorite:</label>
+        <select name="favorite" id="favorite" required>
+            <option disabled selected>Select Work</option>
+            {% for work in list %}
+                <option value="{{ work['id'] }}">{{ work['name'] }}</option>
+            {% endfor %}
+        </select>
+        <button class="btn btn-secondary" type="submit" id="confirm">Confirm</button>
+    </form>
+
+    {% if favorited %}
+        <div class="error">
+            Already added to favorites.
+        </div>
+    {% elif no_favorite_input %}
+        <div class="error">
+            Please select a work to favorite.
+        </div>
+    {% endif %}
+    <br>
+    <form action="/addtolibrary" method="post">
+        <label for="works">Add</label>
+        <select name="work" id="work" required>
+            <option disabled selected>Select Work</option>
+            {% for work in list %}
+                <option value="{{ work['id'] }}">{{ work['name'] }}</option>
+            {% endfor %}
+        </select>
+
+        <label for="libraries">to</label>
+        <select name="library" id="library" required>
+            <option disabled selected>Select Library</option>
+            {% for library in libraries %}
+                <option value="{{ library['lib_name'] }}">{{ library['lib_name'] }}</option>
+            {% endfor %}
+        </select>
+        <button class="btn btn-secondary" type="submit" id="confirm">Confirm</button>
+    </form>
+
+    {% if work_in_lib %}
+    <div class="error">
+        Work is already in the library.
+    </div>
+    {% elif missing_input %}
+        <div class="error">
+            Please select a work and a library.
+        </div>
+    {% endif %}
+
+</div>
+
+</div>
+
+{% endblock %}

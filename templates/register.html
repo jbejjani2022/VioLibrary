@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block main %}
+
+<h3>Register</h3>
+<br><br>
+
+{% for error in errors %}
+    <div class="error">{{ error }}</div>
+{% endfor %}
+
+{% if no_username %}
+<div class="error">
+    Please enter a username.
+</div>
+
+{% elif no_pw %}
+<div class="error">
+    Please enter and confirm password.
+</div>
+
+{% elif username_already_exists %}
+<div class="error">
+    Username is taken.
+</div>
+
+{% elif pw_not_match %}
+<div class="error">
+    The passwords do not match.
+</div>
+{% endif %}
+
+    <form action="/register" method="post">
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="username" name="username" placeholder="Username" type="text">
+        </div>
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" id="password" name="password" placeholder="Password" type="password">
+        </div>
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" id="confirmation" name="confirmation" placeholder="Confirm Password" type="password">
+        </div>
+        <button class="btn btn-primary" type="submit">Register</button>
+    </form>
+{% endblock %}

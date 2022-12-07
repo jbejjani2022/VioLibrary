@@ -1,0 +1,116 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Libraries
+{% endblock %}
+
+{% block main %}
+
+<h3>Libraries</h3>
+<br>
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#createLibrary">
+  Create Library
+</button>
+
+{% if lib_exists%}
+  <div class="error">Library already exists.</div>
+{% endif %}
+
+<!-- Modal -->
+<div class="modal fade" id="createLibrary" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalTitle">Create Library</h5>
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form action="/createlibrary" method="post">
+          Library Name: <input type="text" name="name">
+          <br><br>
+          <button class="btn btn-primary" type="submit" id="create">Create</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<br><br>
+
+{% for i in range(libraries|length) %}
+  <div class="card">
+    <div class="card-header" id="{{ i }}">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_{{ i }}" aria-expanded="false" aria-controls="collapse_{{ i }}">
+          {{ names[i]['lib_name'] }}
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapse_{{ i }}" class="collapse" aria-labelledby="{{ i }}">
+      <div class="card-body">
+          {% for work in libraries[i] %}
+
+                <details>
+                    <summary>{{ work['name'] }} by {{ work['composer'] }}</summary>
+                    <p><br>Title: {{ work['name'] }}
+                      <br>
+                    {% if work['death']|int() == 2099|int() %}
+                        Composer: {{ work['fullname'] }} (b. {{ work['birth'] }})
+                        <br>
+                    {% else %}
+                        Composer: {{ work['fullname'] }} ({{ work['birth'] }} - {{ work['death'] }})
+                        <br>
+                    {% endif%}
+                    Epoch: {{ work['epoch'] }}
+                   </p>
+
+                </details>
+
+
+          {% endfor %}
+        <br>
+        <form action="/removework" method="post">
+          <label for="works">Remove:</label>
+          <select name="work" id="work" required>
+              <option disabled selected>Select Work</option>
+              {% for work in libraries[i] %}
+                  <option value="{{ work['id'] }}">{{ work['name'] }}</option>
+              {% endfor %}
+          </select>
+          <input type="hidden" name="library" value="{{ names[i]['lib_name'] }}">
+
+          <button class="btn btn-secondary" type="submit" id="confirm">Confirm</button>
+        </form>
+      </div>
+    </div>
+  </div>
+{% endfor %}
+</div>
+
+
+<br><br>
+
+
+<br><br>
+<form action="/removelibrary" method="post">
+    <label for="libraries">Delete:</label>
+    <select name="library" id="library" required>
+        <option disabled selected>Select Library</option>
+        {% for name in names %}
+            <option value="{{ name['lib_name'] }}">{{ name['lib_name'] }}</option>
+        {% endfor %}
+    </select>
+    <button class="btn btn-secondary" type="submit" id="confirm">Confirm</button>
+</form>
+
+<script>
+  $(document).on('click',function(){
+  $('.collapse').collapse('show');
+  });
+</script>
+
+{% endblock %}

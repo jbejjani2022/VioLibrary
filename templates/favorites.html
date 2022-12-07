@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Favorites
+{% endblock %}
+
+{% block main %}
+
+<h3>Favorites</h3>
+<br><br>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th class="text-start">Composer</th>
+            <th class="text-start">Title</th>
+            <th class="text-start">Form</th>
+            <th class="text-start">Instrumentation</th>
+            <th class="text-end">Date Added</th>
+            <th class="text-end"></th>
+        </tr>
+    </thead>
+   <tbody>
+        {% for favorite in list %}
+            <tr>
+                <td class="text-start">{{ favorite["composer"] }}</td>
+                <td class="text-start">{{ favorite["name"] }}</td>
+                <td class="text-start">{{ favorite["form"] }}</td>
+                <td class="text-start">{{ favorite["instr"] }}</td>
+                <td class="text-end">{{ favorite["date"] }}</td>
+                <td class="text-end">
+
+                </td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<br>
+<form action="/removefavorite" method="post">
+    <label for="favorites">Unfavorite:</label>
+    <select name="favorite" id="favorite" required>
+        <option disabled selected>Select Work</option>
+        {% for favorite in list %}
+            <option value="{{ favorite['work_id'] }}">{{ favorite['name'] }}</option>
+        {% endfor %}
+    </select>
+    <button class="btn btn-secondary" type="submit" id="confirm">Confirm</button>
+</form>
+
+{% endblock %}

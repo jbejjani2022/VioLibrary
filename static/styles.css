@@ -1,0 +1,98 @@
+/* Size for brand */
+nav .navbar-brand
+{
+    font-size: xx-large;
+    margin-left: 2%;
+}
+
+h1 {
+    font-weight: bold;
+}
+
+h3 {
+    font-weight: bold;
+    text-align: center;
+    font-size: 2.3rem;
+}
+
+h4 {
+    font-weight: bold;
+    text-align: left;
+}
+
+.row {
+    display: flex;
+}
+
+/* Stack columns if display width is less than 600px */
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+}
+
+.table {
+    width: 80%;
+    margin: auto;
+}
+
+.column {
+    float: left;
+}
+
+.left {
+    flex: 23%;
+    margin-left: 2%;
+}
+
+.right {
+    flex: 75%;
+}
+
+.error {
+    color: red;
+}
+
+details > summary {
+    text-align: left;
+    padding: 4px;
+    width: auto;
+    background-color: #eeeeee;
+    border: none;
+    box-shadow: 1px 1px 2px #dfdfdf;
+    cursor: pointer;
+  }
+
+.card-header {
+    background-color: rgb(224, 224, 224);
+}
+
+.card {
+    margin: auto;
+    width: 60%;
+}
+
+h2 {
+    text-align: left;
+}
+
+.btn-link {
+    font-size: 1.2rem;
+}
+
+.dropdown-menu.show {
+    position: absolute;
+    left: -60px;
+}
+
+.dropdown {
+    margin-right: 2%;
+}
+
+.btn-light {
+    border: 1px solid black;
+}
+
+#search-form {
+    text-align: left;
+}

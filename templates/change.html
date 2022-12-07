@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Change Password
+{% endblock %}
+
+{% block main %}
+
+<h3>Change Password</h3>
+<br><br>
+
+{% for error in errors %}
+    <div class="error">{{ error }}</div>
+{% endfor %}
+
+{% if no_old_pw %}
+    <div class="error">Please enter current password.</div>
+{% endif %}
+
+{% if wrong_old_pw %}
+    <div class="error">Incorrect current password.</div>
+{% endif %}
+
+{% if no_new_pw %}
+<div class="error">Please enter new password.</div>
+{% endif %}
+
+    <form action="/changepassword" method="post">
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" id="old" name="old" placeholder="Current Password" type="password">
+        </div>
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" id="new" name="new" placeholder="New Password" type="password">
+        </div>
+        <button class="btn btn-primary" type="submit">Change Password</button>
+    </form>
+{% endblock %}
