@@ -1,6 +1,4 @@
-notes.txt
-transcript.txt
-podcastpal_stream.py
+flask_session
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
