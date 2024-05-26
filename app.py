@@ -109,7 +109,7 @@ def register():
             return render_template("register.html", errors=errors)
 
         # Add to database
-        db.execute("INSERT INTO users(username, hash) VALUES (?, ?)", username, generate_password_hash(password))
+        db.execute("INSERT INTO users(username, hash) VALUES (?, ?)", username, generate_password_hash(password, method='pbkdf2'))
 
         # Get the new user's id
         id = db.execute("SELECT id FROM users WHERE username = ?", username)[0]["id"]
