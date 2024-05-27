@@ -1,0 +1,127 @@
+id,name,fullname,birthyear,deathyear,epoch
+1,Goldmark,Karl Goldmark,1830,1915,Romantic
+2,Paganini,Niccolò Paganini,1782,1840,Early Romantic
+3,Stenhammar,Wilhelm Stenhammar,1871,1927,Late Romantic
+4,Pärt,Arvo Pärt,1935,2099,Post-War
+5,Webern,Anton Webern,1883,1945,20th Century
+6,Korngold,Erich Wolfgang Korngold,1897,1957,20th Century
+7,Delius,Frederick Delius,1862,1934,Late Romantic
+8,Lully,Jean-Baptiste Lully,1632,1687,Baroque
+9,Martinů,Bohuslav Martinů,1890,1959,20th Century
+10,Franck,César Franck,1822,1890,Romantic
+11,Górecki,Henryk Górecki,1933,2010,Post-War
+12,Xenakis,Iannis Xenakis,1922,2001,Post-War
+13,Arnold,Malcolm Arnold,1921,2006,Post-War
+14,Balakirev,Mily Balakirev,1837,1910,Romantic
+15,Zemlinsky,Alexander von Zemlinsky,1871,1942,Late Romantic
+16,Albinoni,Tomaso Albinoni,1671,1751,Baroque
+17,Hummel,Johann Nepomuk Hummel,1778,1837,Early Romantic
+18,Crumb,George Crumb,1929,2022,Post-War
+19,Ginastera,Alberto Ginastera,1916,1983,20th Century
+20,Suk,Josef Suk,1874,1935,Late Romantic
+21,Kodály,Zoltán Kodály,1882,1967,20th Century
+22,Vaughan Williams,Ralph Vaughan Williams,1872,1958,Late Romantic
+23,Enescu,George Enescu,1881,1955,Late Romantic
+24,Piazzolla,Astor Piazzolla,1921,1992,20th Century
+25,Widor,Charles-Marie Widor,1844,1937,Romantic
+26,Walton,William Walton,1902,1983,20th Century
+27,Saint-Saëns,Camille Saint-Saëns,1835,1921,Romantic
+28,Shostakovich,Dmitri Shostakovich,1906,1975,20th Century
+29,Biber,Heinrich Franz von Biber,1644,1704,Baroque
+30,Szymanowski,Karol Szymanowski,1882,1937,Late Romantic
+31,Nielsen,Carl Nielsen,1865,1931,Late Romantic
+32,Fauré,Gabriel Fauré,1845,1924,Late Romantic
+33,Villa-Lobos,Heitor Villa-Lobos,1887,1959,20th Century
+34,Cage,John Cage,1912,1992,Post-War
+35,Ravel,Maurice Ravel,1875,1937,Late Romantic
+36,Frescobaldi,Girolamo Frescobaldi,1583,1643,Baroque
+37,Lalo,Edouard Lalo,1823,1892,Romantic
+38,Rossini,Gioachino Rossini,1792,1868,Early Romantic
+39,Schoenberg,Arnold Schoenberg,1874,1951,20th Century
+40,Kabalevsky,Dmitry Kabalevsky,1904,1987,20th Century
+41,Handel,George Frideric Handel,1685,1759,Baroque
+42,Cui,César Cui,1835,1918,Romantic
+43,Reger,Max Reger,1873,1916,Late Romantic
+44,Granados,Enrique Granados,1867,1916,Late Romantic
+45,Tchaikovsky,Pyotr Ilyich Tchaikovsky,1840,1893,Romantic
+46,Brahms,Johannes Brahms,1833,1897,Romantic
+47,Telemann,Georg Philipp Telemann,1681,1767,Baroque
+48,Busoni,Ferruccio Busoni,1866,1924,Late Romantic
+49,Bach,Johann Sebastian Bach,1685,1750,Baroque
+50,Rihm,Wolfgang Rihm,1952,2099,Post-War
+51,Herbert,Victor Herbert,1859,1924,Late Romantic
+52,Glass,Philip Glass,1937,2099,Post-War
+53,Janacek,Leoš Janáček,1854,1928,Late Romantic
+54,Vivaldi,Antonio Vivaldi,1678,1741,Baroque
+55,Grainger,Percy Grainger,1882,1961,20th Century
+56,Rautavaara,Einojuhani Rautavaara,1928,2016,Post-War
+57,Bax,Arnold Bax,1883,1953,20th Century
+58,Satie,Erik Satie,1866,1925,Late Romantic
+59,Debussy,Claude Debussy,1862,1918,Late Romantic
+60,Bloch,Ernest Bloch,1880,1959,20th Century
+61,Rorem,Ned Rorem,1923,2099,Post-War
+62,Antheil,George Antheil,1900,1959,20th Century
+63,"Bach, J.C.",Johann Christian Bach,1735,1782,Classical
+64,Nono,Luigi Nono,1924,1990,Post-War
+65,Dohnányi,Ernst von Dohnányi,1877,1960,Late Romantic
+66,Pergolesi,Giovanni Battista Pergolesi,1710,1736,Baroque
+67,Lopes-Graça,Fernando Lopes-Graça,1906,1994,20th Century
+68,Milhaud,Darius Milhaud,1892,1974,20th Century
+69,Ibert,Jacques Ibert,1890,1962,20th Century
+70,Bartók,Béla Bartók,1881,1945,20th Century
+71,Schumann,Robert Schumann,1810,1856,Romantic
+72,Boulez,Pierre Boulez,1925,2016,Post-War
+73,Berio,Luciano Berio,1925,2003,Post-War
+74,Bernstein,Leonard Bernstein,1918,1990,20th Century
+75,Gershwin,George Gershwin,1898,1937,20th Century
+76,Schnittke,Alfred Schnittke,1934,1998,Post-War
+77,Corelli,Arcangelo Corelli,1653,1713,Baroque
+78,Ysaÿe,Eugene Ysaÿe,1858,1931,Late Romantic
+79,Lutoslawski,Witold Lutoslawski,1913,1994,Post-War
+80,Corigliano,John Corigliano,1938,2099,21st Century
+81,Beethoven,Ludwig van Beethoven,1770,1827,Early Romantic
+82,Mendelssohn,Felix Mendelssohn,1809,1847,Romantic
+83,Messiaen,Olivier Messiaen,1908,1992,20th Century
+84,Hindemith,Paul Hindemith,1895,1963,20th Century
+85,Henze,Hans Werner Henze,1926,2012,Post-War
+86,Holmboe,Vagn Holmboe,1909,1996,20th Century
+87,Camargo Guarnieri,Camargo Guarnieri,1907,1993,20th Century
+88,Grieg,Edvard Grieg,1843,1907,Romantic
+89,Carter,Elliott Carter,1908,2012,Post-War
+90,Moeran,Ernest Moeran,1894,1950,20th Century
+91,Spohr,Louis Spohr,1784,1859,Early Romantic
+92,Tartini,Giuseppe Tartini,1692,1770,Baroque
+93,Weber,Carl Maria von Weber,1786,1826,Early Romantic
+94,Britten,Benjamin Britten,1913,1976,20th Century
+95,Copland,Aaron Copland,1900,1990,20th Century
+96,Strauss,Richard Strauss,1864,1949,Late Romantic
+97,Gubaidulina,Sofia Gubaidulina,1931,2099,Post-War
+98,Respighi,Ottorino Respighi,1879,1936,Late Romantic
+99,Chávez,Carlos Chávez,1899,1978,20th Century
+100,Reich,Steve Reich,1936,2099,Post-War
+101,Glazunov,Alexander Glazunov,1865,1936,Late Romantic
+102,Babbitt,Milton Babbitt,1916,2011,Post-War
+103,Mussorgsky,Modest Mussorgsky,1839,1881,Romantic
+104,Schubert,Franz Schubert,1797,1828,Early Romantic
+105,Bruch,Max Bruch,1838,1920,Romantic
+106,Prokofiev,Sergei Prokofiev,1891,1953,20th Century
+107,Sibelius,Jean Sibelius,1865,1957,Late Romantic
+108,"Marcello, A.",Alessandro Marcello,1684,1750,Baroque
+109,Rachmaninoff,Sergei Rachmaninoff,1873,1943,Late Romantic
+110,Dvořák,Antonín Dvořák,1841,1904,Romantic
+111,"Bach, C.P.E.",Carl Philipp Emanuel Bach,1714,1788,Classical
+112,Berwald,Franz Berwald,1796,1868,Early Romantic
+113,Mozart,Wolfgang Amadeus Mozart,1756,1791,Classical
+114,Liszt,Franz Liszt,1811,1886,Romantic
+115,Elgar,Edward Elgar,1857,1934,Late Romantic
+116,Purcell,Henry Purcell,1659,1695,Baroque
+117,Honegger,Arthur Honegger,1892,1955,20th Century
+118,Poulenc,Francis Poulenc,1899,1963,20th Century
+119,Penderecki,Krzysztof Penderecki,1933,2020,Post-War
+120,Dittersdorf,Karl Ditters von Dittersdorf,1739,1799,Classical
+121,Berg,Alban Berg,1885,1935,20th Century
+122,Smetana,Bedrich Smetana,1824,1884,Romantic
+123,Takemitsu,Toru Takemitsu,1930,1996,Post-War
+124,Rodrigo,Joaquín Rodrigo,1901,1999,20th Century
+125,Ives,Charles Ives,1874,1954,20th Century
+126,Khachaturian,Aram Khachaturian,1903,1978,20th Century
