@@ -306,9 +306,8 @@ def show_favorites():
     recommender = session["recommender"]
     recommended_works = recommender.get_user_favorites_recommendations(current)
     recs_info = get_works_info(recommended_works, favorites=False)
-    # print(recs_info)
-    for rec in recs_info:
-        print(rec['name'])
+    # for rec in recs_info:
+    #     print(rec['name'])
     
     # Render template
     return render_template("favorites.html", favorites_info=favorites_info, recs_info=recs_info)
@@ -339,7 +338,16 @@ def addfavorite():
     # Update SQL database
     db.execute("INSERT INTO favorites(user_id, work_id, year, month, day, hour, minute, second) VALUES (?, ?, ?, ?, ?, ?, ?, ?)", current, work_id, time.year, time.month, time.day, time.hour, time.minute, int(time.second))
 
-    return redirect("/")
+    # Get the referrer URL
+    referrer = request.referrer
+    
+    # Redirect back to the referring page
+    if referrer:
+        return redirect(referrer)
+    else:
+        # Default redirect if referrer is not available
+        return redirect('/')
+
 
 @app.route("/removefavorite", methods=["POST"])
 @login_required
