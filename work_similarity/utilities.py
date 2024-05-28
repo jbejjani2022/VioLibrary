@@ -32,7 +32,15 @@ def convert_db_to_csv(db, table_name):
         writer.writerow(column_names)
         # Write rows
         writer.writerows(rows)
+        print("db converted to fresh csv")
 
     # Close the cursor and connection
     cursor.close()
     conn.close()
+    
+    
+# current_directory = os.path.dirname(os.path.abspath(__file__))
+# # Construct the path to api.db
+# db_path = os.path.join(current_directory, '..', 'api.db')
+# # Transfer most up to date favorites data to .csv
+# convert_db_to_csv(db_path, 'favorites')

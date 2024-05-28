@@ -125,3 +125,48 @@ def libraries_list():
         # Add library to bigger list of all libraries
         libraries.append(library)
     return libraries, names
+
+
+def get_works_info(works, favorites):
+    """Get info about each work, for lists of favorited or recommended works.
+    Returns a list of dicts, where each dict gives name, form, instr, composer, work_id
+    of the work, plus date added if the work is in favorites.
+
+    Args:
+        works (list): a list of works; either dicts containing work_id, year, month, day data,
+        or integers specifying just the `work_id`s
+    """
+    works_info = []
+    for work in works:
+        # Store information in dict, which will be appended to works_info
+        dict = {}
+        if favorites:
+            work_id = work['work_id']
+            year = str(work['year'])
+            month = str(work['month'])
+            day = str(work['day'])
+            date = year + "-" + month + "-" + day
+            dict['date'] = date
+        else:
+            work_id = work
+
+        # Check if it's a solo work or not (instrumentation)
+        if db.execute("SELECT solo FROM works WHERE id = ?", work_id)[0]['solo'] == 1:
+            instr = 'Violin Solo'
+        else:
+            instr = 'Violin and Piano'
+
+        # Get other info
+        name = db.execute("SELECT name FROM works WHERE id = ?", work_id)[0]['name']
+        form = db.execute("SELECT form FROM works WHERE id = ?", work_id)[0]['form']
+        composer_id = db.execute("SELECT composer_id FROM works WHERE id = ?", work_id)[0]["composer_id"]
+        composer = db.execute("SELECT fullname FROM composers WHERE id = ?", composer_id)[0]["fullname"]
+
+        dict['name'] = name
+        dict['form'] = form
+        dict['instr'] = instr
+        dict['composer'] = composer
+        dict['work_id'] = work_id
+        works_info.append(dict)
+        
+    return works_info

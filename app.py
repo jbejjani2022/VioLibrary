@@ -5,6 +5,8 @@ from tempfile import mkdtemp
 from werkzeug.security import check_password_hash, generate_password_hash
 from datetime import datetime
 from helpers import *
+from work_similarity.recommender import Recommender
+from work_similarity.compute_similarities import compute_similarity_matrix
 
 """
 Contents of functions:
@@ -71,6 +73,9 @@ def login():
         # Remember which user has logged in
         session["user_id"] = rows[0]["id"]
         session["username"] = rows[0]["username"]
+        
+        # Initialize the user's recommender system
+        session["recommender"] = Recommender(5)
 
         # Redirect user to home page
         return redirect("/")
@@ -115,6 +120,10 @@ def register():
         id = db.execute("SELECT id FROM users WHERE username = ?", username)[0]["id"]
         # Log the new user in automatically by assigning their id to session's "user_id" field
         session["user_id"] = id
+        session["username"] = username
+        
+        # Initialize the user's recommender system
+        session["recommender"] = Recommender(5)
 
         return redirect("/")
     else:
@@ -191,7 +200,6 @@ def index():
         # If user chose composer
         composer = request.form.get("composer")
         if composer:
-
             # Get all works by this composer
             query = "SELECT works.* FROM works JOIN composers ON works.composer_id = composers.id WHERE composer_id = (SELECT composers.id FROM composers WHERE composers.name = ?)"
             queries.append(query)
@@ -200,7 +208,6 @@ def index():
         # If user chose birth year
         min_birth = request.form.get("min_birth")
         max_birth = request.form.get("max_birth")
-
         if min_birth:
             query = "SELECT works.* FROM works JOIN composers ON works.composer_id = composers.id WHERE works.composer_id IN (SELECT composers.id FROM composers WHERE composers.birthyear >= ?)"
             queries.append(query)
@@ -215,7 +222,6 @@ def index():
         # If user chose death year
         min_death = request.form.get("min_death")
         max_death = request.form.get("max_death")
-
         if min_death:
             min_death = int(min_death)
             query = "SELECT works.* FROM works JOIN composers ON works.composer_id = composers.id WHERE works.composer_id IN (SELECT composers.id FROM composers WHERE composers.deathyear >= ?)"
@@ -271,7 +277,7 @@ def index():
         if len(list) == 0:
             return render_template("search.html", no_input=True, composers=composers_list, epochs=epochs_list, forms=forms_list, instr=instr_list)
 
-        # Works library only returns composer ID's; this part retrieves their names
+        # Works library only returns composer IDs; this part retrieves their names
         composer_results = []
         for i in range(len(list)):
             composer_results.append(db.execute("SELECT fullname FROM composers WHERE id = ?", list[i]["composer_id"])[0]["fullname"])
@@ -287,51 +293,25 @@ def index():
 @app.route("/favorites", methods=["GET"])
 @login_required
 def show_favorites():
-    """Shows the user a list of their 'favorited' works"""
+    """Shows the user a list of their 'favorited' works, with recommendations for works to add"""
 
     # Getting user info
     current = session["user_id"]
 
-    # Obtaining info
-    list = []
-
-    # Get favourited works from user
-    info = db.execute("SELECT work_id, year, month, day FROM favorites WHERE user_id = ? ORDER BY year, month, day, hour, minute, second", current)
-
-    # For each work returned by work_id
-    for i in range(len(info)):
-        work_id = info[i]['work_id']
-
-        # Check if it's a solo work or not (instrumentation)
-        if db.execute("SELECT solo FROM works WHERE id = ?", work_id)[0]['solo'] == 1:
-            instr = 'Violin Solo'
-        else:
-            instr = 'Violin and Piano'
-
-        # Get other info
-        name = db.execute("SELECT name FROM works WHERE id = ?", work_id)[0]['name']
-        form = db.execute("SELECT form FROM works WHERE id = ?", work_id)[0]['form']
-        composer_id = db.execute("SELECT composer_id FROM works WHERE id = ?", work_id)[0]["composer_id"]
-        composer = db.execute("SELECT fullname FROM composers WHERE id = ?", composer_id)[0]["fullname"]
-
-        # Get date: convert data to str, then concatenate
-        year = str(info[i]['year'])
-        month = str(info[i]['month'])
-        day = str(info[i]['day'])
-        date = year + "-" + month + "-" + day
-
-        # Store information in dict, which will be appended to list
-        dict = {}
-        dict['name'] = name
-        dict['form'] = form
-        dict['instr'] = instr
-        dict['composer'] = composer
-        dict['date'] = date
-        dict['work_id'] = work_id  # For 'Add to Favourites' button
-        list.append(dict)
-
+    # Get favorited works from user
+    favorited_works = db.execute("SELECT work_id, year, month, day FROM favorites WHERE user_id = ? ORDER BY year, month, day, hour, minute, second", current)
+    favorites_info = get_works_info(favorited_works, favorites=True)
+    
+    # Get recommendations for new works to favorite
+    recommender = session["recommender"]
+    recommended_works = recommender.get_user_favorites_recommendations(current)
+    recs_info = get_works_info(recommended_works, favorites=False)
+    # print(recs_info)
+    for rec in recs_info:
+        print(rec['name'])
+    
     # Render template
-    return render_template("favorites.html", list=list)
+    return render_template("favorites.html", favorites_info=favorites_info, recs_info=recs_info)
 
 
 @app.route("/addfavorite", methods=["POST"])
@@ -359,7 +339,7 @@ def addfavorite():
     # Update SQL database
     db.execute("INSERT INTO favorites(user_id, work_id, year, month, day, hour, minute, second) VALUES (?, ?, ?, ?, ?, ?, ?, ?)", current, work_id, time.year, time.month, time.day, time.hour, time.minute, int(time.second))
 
-    return redirect("/favorites")
+    return redirect("/")
 
 @app.route("/removefavorite", methods=["POST"])
 @login_required

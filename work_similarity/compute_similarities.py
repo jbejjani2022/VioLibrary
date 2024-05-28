@@ -4,7 +4,7 @@ import pandas as pd
 from sklearn.metrics import jaccard_score
 from sklearn.preprocessing import LabelEncoder
 
-from utilities import convert_db_to_csv
+from work_similarity.utilities import convert_db_to_csv
 
 
 # Calculate the similarity of each pair of works
@@ -15,8 +15,8 @@ from utilities import convert_db_to_csv
 
 def compute_similarity_matrix():
     # Load the works and composers .csv files as dataframes
-    works_df = pd.read_csv('data/works.csv')
-    composers_df = pd.read_csv('data/composers.csv')
+    works_df = pd.read_csv('work_similarity/data/works.csv')
+    composers_df = pd.read_csv('work_similarity/data/works.csv')
     
     # Rename the id col to 'work_id'
     works_df = works_df.rename(columns={'id': 'work_id'})
@@ -60,7 +60,7 @@ def compute_similarity_matrix():
     return similarity_matrix
 
 
-# Helper function to compute Jaccard similarity for work names
+# Compute Jaccard similarity for work names
 def jaccard_similarity(str1, str2):
     set1, set2 = set(str1.split()), set(str2.split())
     return len(set1.intersection(set2)) / len(set1.union(set2))
