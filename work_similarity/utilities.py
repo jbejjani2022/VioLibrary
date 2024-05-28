@@ -16,7 +16,7 @@ def convert_db_to_csv(db, table_name):
     # Get column names
     column_names = [description[0] for description in cursor.description]
 
-    data_folder = 'data'
+    data_folder = 'work_similarity/data'
     
     # Create the data folder if it doesn't exist
     if not os.path.exists(data_folder):
@@ -32,7 +32,7 @@ def convert_db_to_csv(db, table_name):
         writer.writerow(column_names)
         # Write rows
         writer.writerows(rows)
-        print("db converted to fresh csv")
+        print(f"{table_name}.csv updated using current api.db data")
 
     # Close the cursor and connection
     cursor.close()

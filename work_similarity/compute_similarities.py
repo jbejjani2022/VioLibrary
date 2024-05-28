@@ -16,7 +16,7 @@ from work_similarity.utilities import convert_db_to_csv
 def compute_similarity_matrix():
     # Load the works and composers .csv files as dataframes
     works_df = pd.read_csv('work_similarity/data/works.csv')
-    composers_df = pd.read_csv('work_similarity/data/works.csv')
+    composers_df = pd.read_csv('work_similarity/data/composers.csv')
     
     # Rename the id col to 'work_id'
     works_df = works_df.rename(columns={'id': 'work_id'})
