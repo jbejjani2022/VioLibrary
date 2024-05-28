@@ -1,0 +1,604 @@
+id,composer_id,name,solo,form
+1,1,"Ballad, for violin and piano",0,Misc.
+2,1,"Romance, for violin and piano in A major, op. 51",0,Misc.
+3,1,"Sonata in D major, for violin and piano, op. 25",0,Sonata
+4,1,"Suite, for violin and piano, op. 11 in D",0,Suite
+5,2,"24 Caprices for Solo Violin, op. 1, MS25",1,Misc.
+6,2,4 Studies for Violin Solo,1,Misc.
+7,2,"Cantabile in D major, for violin and piano, MS109, op. 17",0,Misc.
+8,2,"Caprice d'adieu, for solo violin, MS68",1,Misc.
+9,2,"Inno patriotico in A major, Allegro and 6 Variations for solo violin, MS81",1,Misc.
+10,2,"Tema variato in A major, Theme and 7 Variations for solo violin, MS82",1,Misc.
+11,2,"Violin Sonata in A major, MS83",0,Sonata
+12,2,"Violin Sonata in C major, MS6",0,Sonata
+13,2,Violin Sonata no. 1 in D minor,0,Sonata
+14,3,"Sonata for violin and piano in A minor, op. 19",0,Sonata
+15,4,"Fratres, for violin and piano",0,Misc.
+16,4,"Spiegel im Spiegel, for violin and piano",0,Misc.
+17,5,"4 Pieces, for violin and piano, op. 7",0,Misc.
+18,6,"Mariettas Lied zur Laute, for violin and piano",0,Misc.
+19,6,"Much Ado About Nothing, suite from the incidental music for violin and piano, op. 11",0,Suite
+20,6,"Serenade, for violin and piano",0,Misc.
+21,6,"Tanzlied des Pierot, for violin and piano",0,Misc.
+22,6,"Violin Sonata in G major, op. 6",0,Sonata
+23,7,"Violin Sonata in B major, RT viii/3",0,Sonata
+24,7,"Violin Sonata no. 1, RTviii/6",0,Sonata
+25,7,"Violin Sonata no. 2, RTviii/9",0,Sonata
+26,7,"Violin Sonata no. 3, RTviii/10",0,Sonata
+27,8,"Gavotte, for violin and piano",0,Misc.
+28,9,"Violin Sonata no. 3, H.303",0,Sonata
+29,9,"5 Madrigal Stanzas, for violin and piano, H.297",0,Misc.
+30,9,"Concerto for Violin and Piano, H.13",0,Misc.
+31,9,"Violin Sonata in C major, H.120",0,Sonata
+32,9,"Violin Sonata no. 1, H.182",0,Sonata
+33,9,"Violin Sonata no. 2, H.208",0,Sonata
+34,9,"Violin Sonatina, H.262",0,Misc.
+35,10,"Violin Sonata in A major, M.8",0,Sonata
+36,10,"Andantino quietoso in E flat major, for violin and piano, op. 6, M.5",0,Misc.
+37,10,"Duo concertant in B flat major, for violin and piano, op. 14, M.6",0,Misc.
+38,11,"Little Fantasia, for violin and piano, op. 73",0,Misc.
+39,11,"Sonatina in one movement for violin and piano, op. 8",0,Misc.
+40,11,"Variations, for violin and piano, op. 4",0,Misc.
+41,12,"Dikhthas, for violin and piano",0,Misc.
+42,12,"Mikka, for violin",0,Misc.
+43,13,"5 Pieces for Violin and Piano, op. 84",0,Misc.
+44,13,"Sonata for Violin and Piano, op. 17",0,Sonata
+45,13,"Sonata for Violin and Piano no. 1, op. 15",0,Sonata
+46,13,"Sonata for Violin and Piano no. 2, op. 43",0,Sonata
+47,14,"Expromt, for violin and piano",0,Misc.
+48,15,Serenade in A minorDur für Violin und Klavier,0,Misc.
+49,15,"Suite  in A major, for violin and piano",0,Suite
+50,16,"Violin Sonata in B flat major, T.So.32, ""Dresden Sonata no. 1""",0,Sonata
+51,16,"Violin Sonata in G minor, T. So 33, ""Dresden Sonata no. 2""",0,Sonata
+52,17,"3 Violin Sonatas, op. 5",0,Sonata
+53,17,"Amusement in F major, for violin and piano, op. 108, ""Sonatine""",0,Misc.
+54,17,"Introduction and variations on a German song in F major, for violin  and piano, op.  posth. 2",0,Misc.
+55,17,"Rondo brillant for Violin and Piano, op. 126",0,Misc.
+56,18,"4 Nocturnes, for violin and piano",0,Misc.
+57,19,"Pampeana no. 1, for violin and piano, op. 16",0,Misc.
+58,20,"4 Pieces for Violin and Piano, op. 17",0,Misc.
+59,20,"Ballade in D minor, for violin and piano",0,Misc.
+60,21,"Adagio, for violin and piano",0,Misc.
+61,22,2 Pieces for Violin and Piano,0,Misc.
+62,22,Violin Sonata in A minor,0,Sonata
+63,23,"Violin Sonata no. 3 in A minor, op. 25, ""Dans le caractere populaire roumain""",0,Sonata
+64,23,"Airs dans le genre roumin, for violin",0,Misc.
+65,23,"Andante malinconico, for violin and piano",0,Misc.
+66,23,"Hora Unirei, for violin and piano",0,Misc.
+67,23,"Impressions d'enfance, for violin and piano in D major, op. 28",0,Misc.
+68,23,"Impromptu concertant, for violin and piano in G flat major",0,Misc.
+69,23,"Légende, for violin and piano",0,Misc.
+70,23,"Pastorale, Menuet Triste et Nocturne, for violin and piano 4 hands",0,Misc.
+71,23,"Sarabande, for violin",0,Misc.
+72,23,"Sonata Torso, for violin and piano",0,Sonata
+73,23,"Tarantella, for violin and piano",0,Misc.
+74,23,Violin Sonata in A minor,0,Sonata
+75,23,"Violin Sonata no. 1 in D major, op. 2",0,Sonata
+76,23,"Violin Sonata no. 2 in F minor, op. 6",0,Sonata
+77,24,"Milonga en Re, tango for violin and piano",0,Misc.
+78,25,"Cavatine for violin and piano, op. 57",0,Misc.
+79,25,"Romance for violin and piano in E major, op. 46",0,Misc.
+80,25,"Sonata for violin and piano no. 1, op. 50",0,Sonata
+81,25,"Sonata for violin and piano no. 2, op. 79",0,Sonata
+82,25,Suite Florentine for violin and piano,0,Suite
+83,26,2 Pieces for Violin and Piano,0,Misc.
+84,26,"Toccata, for violin and piano",0,Misc.
+85,26,Violin Sonata,0,Sonata
+86,27,"Berceuse in B flat major, for violin and piano, op. 38",0,Misc.
+87,27,"Elegie in F major, for violin and piano, op. 160",0,Misc.
+88,27,"Elegy no. 1 for Violin and Piano, op. 143",0,Misc.
+89,27,"L'air de la pendule in A minor, for violin and piano",0,Misc.
+90,27,"Romance for Piano, Organ and Violin in B flat major, op. 27",0,Misc.
+91,27,Sonata for violin and piano,0,Sonata
+92,27,"Sonate inachevee, for violin and piano",0,Misc.
+93,27,"Violin Sonata no. 1 in D minor, op. 75",0,Sonata
+94,27,"Violin Sonata no. 2 in E flat major, op. 102",0,Sonata
+95,28,"Violin Sonata, op. 134",0,Sonata
+96,29,"Sonates du Rosaire, for violin: Crucifixion",0,Misc.
+97,29,"Passacaglia in G minor, for solo violin",1,Misc.
+98,29,"Sonata for Solo Violin in A major, C.147",1,Sonata
+99,29,"Violin Sonata in A, C.106, ""Pastorella""",0,Sonata
+100,29,"Violin Sonata in A, C.146, ""Representatio Avium""",0,Sonata
+101,29,"Violin Sonata in A major, C.147",0,Sonata
+102,29,"Violin Sonata in C minor, C.107",0,Sonata
+103,29,"Violin Sonata in E major, C.108",0,Sonata
+104,29,"Violin Sonata no. 1 in A major, C.138",0,Sonata
+105,29,"Violin Sonata no. 2 in D minor, C.139",0,Sonata
+106,29,"Violin Sonata no. 3 in F major, C.140",0,Sonata
+107,29,"Violin Sonata no. 4 in D major, C.141",0,Sonata
+108,29,"Violin Sonata no. 5 in E minor, C.142",0,Sonata
+109,29,"Violin Sonata no. 6 in C minor, C.143",0,Sonata
+110,29,"Violin Sonata no. 7 in G minor, C.144",0,Sonata
+111,29,"Violin Sonata no. 8 in G major, C.145",0,Sonata
+112,30,"3 Myths, for violin and piano, op. 30",0,Misc.
+113,30,"Lullaby, for violin and piano, op. 52, M58, ""La berceuse d'Aïtacho Enia""",0,Misc.
+114,30,"Nocturne et Tarentelle, for violin and piano, op. 28",0,Misc.
+115,30,"Piesn Kurpiowska, for violin and piano",0,Misc.
+116,30,"Polnische Weise, for violin",0,Misc.
+117,30,"Romance in D major, for violin and piano, op. 23",0,Misc.
+118,30,"Violin Sonata in D minor, op. 9",0,Sonata
+119,31,"Violin Sonata no. 2 in G minor, FS64, op. 35",0,Sonata
+120,31,"Praeludium og Tema med Variationer, for violin, FS104, op. 48",0,Misc.
+121,31,"Preludio e presto, for violin solo, FS128, op. 52",1,Misc.
+122,31,"Violin Sonata in A major, FS20, op. 9",0,Sonata
+123,31,"Violin Sonata no. 1 in G major, FS3b",0,Sonata
+124,32,"Andante for Violin and Piano in B flat major, op. 75",0,Misc.
+125,32,"Berceuse, for violin and piano, op. 16",0,Misc.
+126,32,"Morceau de Lecture, for violin and piano",0,Misc.
+127,32,"Romance in B flat major, for violin and piano, op. 28",0,Misc.
+128,32,"Violin Sonata no. 1 in A major, op. 13",0,Sonata
+129,32,"Violin Sonata no. 2 in E minor, op. 108",0,Sonata
+130,33,"Sonata Fantasia no. 1, for violin and piano, A.51",0,Sonata
+131,33,"Sonata Fantasia no. 2, for violin and piano, A.83",0,Sonata
+132,34,"Nocturne, for violin and piano",0,Misc.
+133,34,"One-6, for violin solo",1,Misc.
+134,34,"One-10, for violin solo",1,Misc.
+135,34,"Two-4, for violin and piano",0,Misc.
+136,35,Violin Sonata no. 2 in G,0,Sonata
+137,35,"Berceuse sur le nom de Gabriel Fauré, for violin and piano",0,Misc.
+138,35,"Kaddish, for violin and piano",0,Misc.
+139,35,"Pièce en forme de Habanera, for violin and piano",0,Misc.
+140,35,"Tzigane: Rhapsodie de concert, for violin and piano",0,Misc.
+141,35,"Violin Sonata no. 1 in A minor, ""Posthumous""",0,Sonata
+142,36,Toccata per Spinettina e Violino,0,Misc.
+143,37,"2 Impromptus, for violin and piano, op. 4",0,Misc.
+144,37,"2 Impromptus, Pastorale and Scherzo for violin and piano, op. 8",0,Misc.
+145,37,"Allegro maestoso in C minor, for violin and piano, op. 2",0,Misc.
+146,37,"Fantaisie Norvégienne, for violin and piano",0,Misc.
+147,37,"Fantaisie originale in A major, for violin and piano, op. 1",0,Misc.
+148,37,"Violin Sonata in D major, op. 12",0,Sonata
+149,38,"Tema originale, for violin and piano",0,Misc.
+150,39,"Fantasy for Violin and Piano, op. 47",0,Misc.
+151,39,"Untitled piece in D minor, for violin and piano",0,Misc.
+152,40,"Improvisation, for violin and piano, op. 21",0,Misc.
+153,41,6 Violin Sonatas,0,Sonata
+154,41,"Violin Sonata in A major, op. 1, no. 3, HWV.361",0,Sonata
+155,41,"Violin Sonata in D major, op. 1, no. 13, HWV.371",0,Sonata
+156,41,"Violin Sonata in D minor,Op. 1, no. 1, HWV.359a",0,Sonata
+157,41,"Violin Sonata in G major, HWV.358",0,Sonata
+158,41,"Violin Sonata in G minor, op. 1, no. 6, HWV.364a",0,Sonata
+159,42,"Kaleidoscope, 24 morceaux, for violin and piano, op. 50",0,Misc.
+160,42,"Orientale, for violin and piano, op. 50, no. 9",0,Misc.
+161,42,"Petite Suite, for violin and piano, op. 14",0,Suite
+162,43,"8 Preludes and Fugues for Violin, op. 117",0,Misc.
+163,43,"Albumblatt and Romanze, for violin and piano, op. 87",0,Misc.
+164,43,"Little Sonata, for violin and piano in A major, op. 103b/2",0,Sonata
+165,43,"Romance in G major, for violin and piano",0,Misc.
+166,43,"Sonata, for violin and piano, no. 1 in D minor, op. 1",0,Sonata
+167,43,"Sonata, for violin and piano, no. 4 in C major, op. 72",0,Sonata
+168,43,"Sonata for Solo Violin in A minor, op. 91, no. 1",1,Sonata
+169,43,"Sonata for Solo Violin in A minor, op. 91, no. 7",1,Sonata
+170,43,"Sonata for Solo Violin in B flat major, op. 91, no. 3",1,Sonata
+171,43,"Sonata for Solo Violin in B minor, op. 91, no. 4",1,Sonata
+172,43,"Sonata for Solo Violin in E minor, op. 91, no. 5",1,Sonata
+173,43,"Sonata for Solo Violin in G major, op. 91, no. 6",1,Sonata
+174,43,"Suite in A minor, op. 103a, for violin and piano",0,Suite
+175,43,"Suite in F for Violin and Piano, op. 93, ""Im alten Stil""",0,Suite
+176,43,"Violin Sonata in A major, op. 41",0,Sonata
+177,43,"Violin Sonata in D major, op. 3",0,Sonata
+178,43,"Violin Sonata no. 6 in E minor, op. 122",0,Sonata
+179,43,"Violin Sonata no. 7 in C major, op. 139",0,Sonata
+180,43,"Wiegenlied, for violin and piano, op. 79d/1",0,Misc.
+181,44,"Escena religiosa, for violin, organ, piano, and timbales, H.53",0,Misc.
+182,44,"Romanza for Violin and Piano, H.115",0,Misc.
+183,44,"Violin Sonata, H.127",0,Sonata
+184,45,"Souvenir d'un lieu cher, for violin and piano, op. 42",0,Misc.
+185,45,"Valse sentimentale, for violin and piano in F minor, op. 51, no. 6",0,Misc.
+186,46,"Violin Sonata no. 1 in G major, op. 78",0,Sonata
+187,46,"Violin Sonata no. 2 in A major, op. 100",0,Sonata
+188,46,"Violin Sonata no. 3 in D minor, op. 108",0,Sonata
+189,47,"12 Fantasias for Solo Violin, TWV.40:14-25",1,Misc.
+190,47,"Sonata in B flat major for Recorder and Violin, TWV.40:111",0,Sonata
+191,47,"Violin Sonata in A major, TWV.41:A5",0,Sonata
+192,47,"Violin Sonata in A major, TWV.41:h5",0,Sonata
+193,47,"Violin Sonata in A minor, TWV.41:a1",0,Sonata
+194,47,"Violin Sonata in A minor, TWV.41:a5",0,Sonata
+195,47,"Violin Sonata in B minor, TWV.41:h1",0,Sonata
+196,47,"Violin Sonata in D minor, TWV.41:d3",0,Sonata
+197,47,"Violin Sonata in F major, TWV. 41:F3",0,Sonata
+198,47,"Violin Sonata in G major, TWV.41:G1",0,Sonata
+199,47,"Violin Sonata in G minor, TWV.41:g1",0,Sonata
+200,47,"Violin Sonata in G minor, TWV.41:g7",0,Sonata
+201,47,"Violin Sonata in in D major, TWV.41:D1",0,Sonata
+202,47,"Violin Sonata no. 6 in A major, TWV. 41:A1",0,Sonata
+203,48,"4 Bagatelles for Violin and Piano, op. 28, KiV 229",0,Misc.
+204,48,Violin Sonata in C,0,Sonata
+205,48,"Violin Sonata no. 1 in E minor, op. 29, KiV 234",0,Sonata
+206,48,"Violin Sonata no. 2 in E minor, op. 36a, KiV 244",0,Sonata
+207,49,"Partita no. 2 for Solo Violin in D minor, BWV.1004",1,Suite
+208,49,"Partita no. 1 for Solo Violin in B minor, BWV.1002",1,Suite
+209,49,"Partita no. 3 for Solo Violin in E major, BWV.1006",1,Suite
+210,49,"Sonata no. 1 for Solo Violin in G minor, BWV.1001",1,Sonata
+211,49,"Sonata no. 2 for Solo Violin in A minor, BWV.1003",1,Sonata
+212,49,"Sonata no. 3 for Solo Violin in C major, BWV.1005",1,Sonata
+213,49,"Violin Sonata in A major, BWV. Anh.153",0,Sonata
+214,49,"Violin Sonata in E minor, BWV.1023",0,Sonata
+215,49,"Violin Sonata in G major, BWV.1019a",0,Sonata
+216,49,"Violin Sonata in G major, BWV.1021",0,Sonata
+217,49,"Violin Sonata no. 1 in B minor, BWV.1014",0,Sonata
+218,49,"Violin Sonata no. 2 in A major, BWV.1015",0,Sonata
+219,49,"Violin Sonata no. 3 in E major, BWV.1016",0,Sonata
+220,49,"Violin Sonata no. 4 in C minor, BWV.1017",0,Sonata
+221,49,"Violin Sonata no. 5 in F minor, BWV.1018",0,Sonata
+222,49,"Violin Sonata no. 6 in G major, BWV.1019",0,Sonata
+223,50,"Antlitz, for violin and piano",0,Misc.
+224,50,"Hekton, for violin and piano",0,Misc.
+225,50,"Phantom und Eskapade, for violin and piano",0,Misc.
+226,50,"Uber die Linie VII, for violin",0,Misc.
+227,50,Violin Sonata,0,Sonata
+228,51,"A la valse, for violin and piano",0,Misc.
+229,52,Sonata no. 1 for Violin and Piano,0,Sonata
+230,52,"Strung Out, for amplified violin",0,Misc.
+231,53,"Violin Sonata, JW VII/7",0,Sonata
+232,53,"Dumka, for violin and piano, JW VII/4",0,Misc.
+233,53,"Romance for Violin and Piano in E major, JW VII/3",0,Misc.
+234,54,"12 Violin Sonatas, op. 2",0,Sonata
+235,54,"Violin Sonata in A, RV.29",0,Sonata
+236,54,"Violin Sonata in A major, RV.758",0,Sonata
+237,54,"Violin Sonata in A minor, op. 2, no. 12, RV.32",0,Sonata
+238,54,"Violin Sonata in B flat major, RV.759",0,Sonata
+239,54,"Violin Sonata in B flat major, RV.809",0,Sonata
+240,54,"Violin Sonata in B minor, RV.37",0,Sonata
+241,54,"Violin Sonata in B minor, RV.760",0,Sonata
+242,54,"Violin Sonata in C major, RV.2",0,Sonata
+243,54,"Violin Sonata in C major, RV.3",0,Sonata
+244,54,"Violin Sonata in C major, RV.754",0,Sonata
+245,54,"Violin Sonata in C major, RV.815",0,Sonata
+246,54,"Violin Sonata in C minor, RV.5",0,Sonata
+247,54,"Violin Sonata in C minor, RV.6",0,Sonata
+248,54,"Violin Sonata in D major, RV.10",0,Sonata
+249,54,"Violin Sonata in D major, RV.755",0,Sonata
+250,54,"Violin Sonata in D major, RV.785",0,Sonata
+251,54,"Violin Sonata in D major, RV.816",0,Sonata
+252,54,"Violin Sonata in D minor, RV.11",0,Sonata
+253,54,"Violin Sonata in D minor, RV.12",0,Sonata
+254,54,"Violin Sonata in D minor, RV.13",0,Sonata
+255,54,"Violin Sonata in D minor, RV.15",0,Sonata
+256,54,"Violin Sonata in E flat major, RV.756",0,Sonata
+257,54,"Violin Sonata in E minor, RV.16, op. 2, no. 9",0,Sonata
+258,54,"Violin Sonata in E minor, RV.17a",0,Sonata
+259,54,"Violin Sonata in F major, RV.19",0,Sonata
+260,54,"Violin Sonata in G major, RV.22",0,Sonata
+261,54,"Violin Sonata in G major, RV.24",0,Sonata
+262,54,"Violin Sonata in G major, RV.25",0,Sonata
+263,54,"Violin Sonata in G major, RV.776",0,Sonata
+264,54,"Violin Sonata in G minor, RV.26",0,Sonata
+265,54,"Violin Sonata in G minor, RV.757",0,Sonata
+266,55,"Molly on the Shore, folk song for violin and piano",0,Misc.
+267,56,"Whispering, for violin and piano",0,Misc.
+268,57,Ballad for Violin and Piano,0,Misc.
+269,57,Concert Piece for Violin  and Piano,0,Misc.
+270,57,Violin Sonata no. 1 in E,0,Sonata
+271,57,Violin Sonata no. 2 in D,0,Sonata
+272,57,Violin Sonata no. 3 in G minor,0,Sonata
+273,57,Violin Sonata no. 4 in F,0,Sonata
+274,58,"Choses vues à droite et à gauche; sans lunettes, for violin and piano",0,Misc.
+275,59,"Violin Sonata in G minor, L.140",0,Sonata
+276,60,"Abodah: a Yom Kippur melody, for violin and piano",0,Misc.
+277,60,"Baal Shem: 3 Pictures of Hassidic life, for violin and piano",0,Misc.
+278,60,"Exotic Night, for violin and piano",0,Misc.
+279,60,"Melody, for violin and piano",0,Misc.
+280,60,Suite no. 1 for Solo Violin,1,Suite
+281,60,Suite no. 2 for Solo Violin,1,Suite
+282,60,Violin Sonata no. 1,0,Sonata
+283,60,"Violin Sonata no. 2, ""Poème mystique""",0,Sonata
+284,61,"Day Music, for violin and piano",0,Misc.
+285,61,"Night Music, for violin and piano",0,Misc.
+286,62,Solo Violin Sonata,1,Sonata
+287,62,"Sonatina, for violin and piano, W.140",0,Misc.
+288,62,Violin Sonata no. 1,0,Sonata
+289,62,Violin Sonata no. 2,0,Sonata
+290,62,Violin Sonata no. 4,0,Sonata
+291,63,"Triosonata in C major, for violin",0,Sonata
+292,63,"Violin Sonata in A major, op. 16, no. 4, CW B13",0,Sonata
+293,63,"Violin Sonata in A Op.10, no. 4, CW B5",0,Sonata
+294,63,"Violin Sonata in C major, op. 2, no. 4, W. B46",0,Sonata
+295,63,"Violin Sonata in C major, op. 16, no. 3, CW B12",0,Sonata
+296,63,"Violin Sonata in C Op.10, no. 2, CW B3",0,Sonata
+297,63,"Violin Sonata in D major, op. 16, no. 1, CW B10",0,Sonata
+298,63,"Violin Sonata in D major, op. 16, no. 5, CW B14",0,Sonata
+299,63,"Violin Sonata in D major, op. 20 no. 2",0,Sonata
+300,63,"Violin Sonata in D Op.10, no. 6, CW B7",0,Sonata
+301,63,"Violin Sonata in F major, op. 16, no. 6, CW B15",0,Sonata
+302,63,"Violin Sonata in G major, op. 16, no. 2, CW B11",0,Sonata
+303,64,"La lontananza nostalgica utopica futura, for violin and 8 magnetic tapes",0,Misc.
+304,65,"Ruralia Hungarica, for violin and piano, op. 32c",0,Misc.
+305,65,"Violin Sonata, op. 21",0,Sonata
+306,66,Violin Concerto in B flat major,0,Misc.
+307,67,"Violin Sonatina no. 1, op. 10, LG 96",0,Misc.
+308,68,"Le Printemps, for violin and piano, op. 18",0,Misc.
+309,68,"Violin Sonata no. 2, op. 40",0,Sonata
+310,69,"Caprilena, for solo violin",1,Misc.
+311,69,"The Gaseous Water's Saleswoman, for banyan and violin",0,Misc.
+312,70,"Sonata for Violin Solo, BB124, Sz.117",1,Sonata
+313,70,"Albumblatt, for violin and piano, BB26b",0,Misc.
+314,70,"Rhapsody for Violin and Piano no. 1, BB94a, Sz.86",0,Misc.
+315,70,"Rhapsody for Violin and Piano no. 2, BB96a, Sz.89",0,Misc.
+316,70,"Violin Sonata in E minor, BB28",0,Sonata
+317,70,"Violin Sonata no. 2 in C major, BB85, Sz.76",0,Sonata
+318,71,"Violin Sonata in A minor, WoO 2",0,Sonata
+319,71,"Violin Sonata no. 1 in A minor, op. 105",0,Sonata
+320,71,"Violin Sonata no. 2 in D minor, op. 121",0,Sonata
+321,71,"Violin Sonata no. 3 in A minor, WoO 27",0,Sonata
+322,72,"Anthemes, for solo violin",1,Misc.
+323,72,"Anthemes 2, for violin and electronics",0,Misc.
+324,73,"2 Pieces, for violin and piano",0,Misc.
+325,74,Violin Sonata,0,Sonata
+326,75,"Short Story, for violin and piano",0,Misc.
+327,75,Three Preludes for Violin and Piano,0,Misc.
+328,76,Violin Sonata no. 1,0,Sonata
+329,76,"A Paganini, for violin",0,Misc.
+330,76,"Fugue, for solo violin",1,Misc.
+331,76,"Gratulationsrondo in C major, for violin and piano",0,Misc.
+332,76,"Madrigal in memoriam Oleg Kagan, for violin",0,Misc.
+333,76,"Silent Night, for violin and piano",0,Misc.
+334,76,"Suite  in the Old Style, for violin and piano",0,Suite
+335,76,Violin Sonata,0,Sonata
+336,76,"Violin Sonata no. 2, ""Quasi una sonata""",0,Sonata
+337,76,Violin Sonata no. 3,0,Sonata
+338,77,"Violin Sonata in A major, op. 5, no. 6",0,Sonata
+339,77,"Violin Sonata in A major, op. 5, no. 9",0,Sonata
+340,77,"Violin Sonata in B flat major, op. 5, no. 2",0,Sonata
+341,77,"Violin Sonata in C major, op. 5, no. 3",0,Sonata
+342,77,"Violin Sonata in D major, op. 5, no. 1",0,Sonata
+343,77,"Violin Sonata in D minor, op. 5, no. 7",0,Sonata
+344,77,"Violin Sonata in D minor, op. 5, no. 12, ""La folia""",0,Sonata
+345,77,"Violin Sonata in E major, op. 5, no. 11",0,Sonata
+346,77,"Violin Sonata in E minor, op. 5, no. 8",0,Sonata
+347,77,"Violin Sonata in F major, op. 5, no. 4",0,Sonata
+348,77,"Violin Sonata in F major, op. 5, no. 10",0,Sonata
+349,77,"Violin Sonata in G minor, op. 5, no. 5",0,Sonata
+350,78,"6 Sonatas for Violin Solo, op. 27",1,Sonata
+351,78,Violin Sonata no. 3,0,Sonata
+352,78,"Rève d'enfant, for violin and piano, op. 14",0,Misc.
+353,78,"Variations on Paganini's 'Caprice no. 24', for solo violin",1,Misc.
+354,78,"Violin Sonata in F minor, ""Au tombeau d'après la sonate de Pietro Antonio Locatelli""",0,Sonata
+355,79,"Lullaby for Anne-Sophie, for violin and piano",0,Misc.
+356,79,"Partita, for violin and piano",0,Suite
+357,79,"Recitativo e arioso, for violin and piano",0,Misc.
+358,79,"Subito, for violin and piano",0,Misc.
+359,80,"Chaconne from The Red Violin, for violin and piano",0,Misc.
+360,80,"The Red Violin Caprices, for violin",0,Misc.
+361,80,Violin Sonata,0,Sonata
+362,81,"Violin Sonata no. 7 in C minor, op. 30 no. 2",0,Sonata
+363,81,"Violin Sonata no. 9 in A major, op. 47, ""Kreutzer""",0,Sonata
+364,81,"Rondo for Violin and Piano in G major, WoO 41",0,Misc.
+365,81,"Violin Sonata no. 1 in D major, op. 12 no. 1",0,Sonata
+366,81,"Violin Sonata no. 2 in A major, op. 12 no. 2",0,Sonata
+367,81,"Violin Sonata no. 3 in E flat major, op. 12 no. 3",0,Sonata
+368,81,"Violin Sonata no. 4 in A minor, op. 23",0,Sonata
+369,81,"Violin Sonata no. 5 in F major, op. 24, ""Spring""",0,Sonata
+370,81,"Violin Sonata no. 6 in A major, op. 30 no. 1",0,Sonata
+371,81,"Violin Sonata no. 8 in G major, op. 30 no. 3",0,Sonata
+372,81,"Violin Sonata no. 10 in G major, op. 96",0,Sonata
+373,82,Allegro for Violin and Piano in C,0,Misc.
+374,82,Andante for Violin and Piano in D minor,0,Misc.
+375,82,Fugue for Violin and Piano in C minor,0,Misc.
+376,82,Fugue for Violin and Piano in D minor,0,Misc.
+377,82,Movement for Violin and Piano in G minor,0,Misc.
+378,82,Violin Concerto,0,Misc.
+379,82,Violin Sonata in E minor,0,Sonata
+380,82,Violin Sonata in F,0,Sonata
+381,82,Violin Sonata in F,0,Sonata
+382,82,Violin Sonata in F,0,Sonata
+383,82,"Violin Sonata in F major, MWVQ26",0,Sonata
+384,82,"Violin Sonata in F minor, op. 4",0,Sonata
+385,83,"Fantasie, for violin and piano, II/12",0,Misc.
+386,83,"Theme and Variations for Violin and Piano, I/10",0,Misc.
+387,84,"Meditation, for violin",0,Misc.
+388,84,"Violin Sonata, op. 31, no. 1",0,Sonata
+389,84,"Violin Sonata, op. 31, no. 2, ""Es ist so schönes Wetter draussen""",0,Sonata
+390,84,"Violin Sonata, op. 31, no. 4",0,Sonata
+391,84,Violin Sonata in C,0,Sonata
+392,84,"Violin Sonata in D major, op. 11, no. 2",0,Sonata
+393,84,Violin Sonata in E,0,Sonata
+394,84,"Violin Sonata in E flat major, op. 11, no. 1",0,Sonata
+395,85,"5 Night Pieces, for violin and piano",0,Misc.
+396,85,"Fünf Nachtstücke, for violin and piano",0,Misc.
+397,85,"Sonata, for violin solo",1,Sonata
+398,85,"Étude Philharmonique, for violin",0,Misc.
+399,86,Bagatelle for violin and piano no. 1,0,Misc.
+400,86,"Haiduc, for violin and piano, op. 193",0,Misc.
+401,86,"Reminiscences, for solo violin",1,Misc.
+402,86,Sonata for violin and piano no. 1,0,Sonata
+403,86,"Sonata for violin and piano no. 2, op. 16",0,Sonata
+404,86,"Sonata for violin and piano no. 3, op. 89",0,Sonata
+405,86,Violin solo,1,Misc.
+406,87,"Encantamento, for violin and piano",0,Misc.
+407,87,Sonata for violin and piano no. 3,0,Sonata
+408,87,Sonata for violin and piano no. 7,0,Sonata
+409,87,Sonata for violin and piano No 2,0,Sonata
+410,87,Sonata for violin and piano No 4,0,Sonata
+411,87,Sonata for violin and piano No 5,0,Sonata
+412,87,Sonata for violin and piano No 6,0,Sonata
+413,88,"Violin Sonata no. 3 in C minor, op. 45",0,Sonata
+414,88,"Violin Sonata no. 1 in F major, op. 8",0,Sonata
+415,88,"Violin Sonata no. 2 in G major, op. 13",0,Sonata
+416,89,"4 Lauds, for violin",0,Misc.
+417,89,"Mnemosyne, for violin",0,Misc.
+418,89,"Rhapsodic Musings, for violin",0,Misc.
+419,89,"Riconoscenza, for violin",0,Misc.
+420,90,Violin Sonata in E minor,0,Sonata
+421,91,"6 Salonstucke, for violin and pinano, op. 135",0,Misc.
+422,91,"Adagio in G major, for violin and piano, WoO37",0,Misc.
+423,91,"Duos concertant in E major, for violin and piano, op. 112",0,Misc.
+424,91,"Potpourri on themes by Mozart for violin and string trio in B major, op. 24",0,Misc.
+425,91,"Potpourri on themes from Gaveaux's 'Le petit matelot,' for violin and string trio in G major, op. 5",0,Misc.
+426,91,"Rondoletto in G major, for violin and piano, op. 149",0,Misc.
+427,92,"Violin Sonata in G minor, B.g5, ""The Devil's Trill""",0,Sonata
+428,92,"50 Variations on a Theme of Corelli, for violin and piano",0,Misc.
+429,92,"Fugue in A major, for violin and organ",0,Misc.
+430,92,"Violin Sonata, B. D1",0,Sonata
+431,92,"Violin Sonata, B. G10, op. 6, no. 6",0,Sonata
+432,92,"Violin Sonata in A major, B.A1",0,Sonata
+433,92,"Violin Sonata in A major, B. A6, op. 6, no. 4",0,Sonata
+434,92,"Violin Sonata in A major, B. A19,Op.6, no. 2",0,Sonata
+435,92,"Violin Sonata in B flat major, B. B5, op. 6, no. 5",0,Sonata
+436,92,"Violin Sonata in B minor, B.h1",0,Sonata
+437,92,"Violin Sonata in C major, B. C1",0,Sonata
+438,92,"Violin Sonata in D major, B. D8, op. 6, no. 3",0,Sonata
+439,92,"Violin Sonata in D minor, B. d1",0,Sonata
+440,92,"Violin Sonata in D minor, B.d1",0,Sonata
+441,92,"Violin Sonata in E minor, B. e1",0,Sonata
+442,92,"Violin Sonata in F major, B. F1",0,Sonata
+443,92,"Violin Sonata in G major, B. G1",0,Sonata
+444,92,"Violin Sonata in G major, B. G2",0,Sonata
+445,92,"Violin Sonata in G major, B. G8, op. 6, no. 1",0,Sonata
+446,92,"Violin Sonata in G major, B.G19",0,Sonata
+447,92,"Violin Sonata in G minor, B.g10, ""Didone abbandonata""",0,Sonata
+448,92,"Violin Sonata in G minor, B.g11",0,Sonata
+449,92,Violin Sonata no. 7 in A minor,0,Sonata
+450,92,Violin Sonata no. 8 in G minor,0,Sonata
+451,92,Violin Sonata no. 9 in A,0,Sonata
+452,92,Violin Sonata no. 10 in B,0,Sonata
+453,92,Violin Sonata no. 11 in E,0,Sonata
+454,92,Violin Sonata no. 12 in G,0,Sonata
+455,93,"6 Progressions Sonatas for Piano and Violin Obligato, J.99-104, op. 10b",0,Sonata
+456,93,"9 Variations in D minor on a Norwegian Air, for violin and piano, op. 22, J.61",0,Misc.
+457,93,"Country Dance, for violin and piano",0,Misc.
+458,94,"Reveille, for violin and piano",0,Misc.
+459,94,"Suite for Violin and Piano, op. 6",0,Suite
+460,94,"Valse in B major, for violin and piano",0,Misc.
+461,95,Violin Sonata,0,Sonata
+462,95,2 Pieces for Violin and Piano,0,Misc.
+463,95,"Prelude no. 1, for violin and piano",0,Misc.
+464,95,"Prelude no. 2, for violin and piano",0,Misc.
+465,96,"Allegretto in E major, for violin and piano, TrV295",0,Misc.
+466,96,"Violin Sonata in E flat major, op. 18, TrV151",0,Sonata
+467,97,"Dancer on a Tightrope, for violin and piano",0,Misc.
+468,98,"5 Pezzi for Violin and Piano, P.62",0,Misc.
+469,98,"6 Pezzi for Violin and Piano, P.31",0,Misc.
+470,98,"Allegretto vivace, for violin and piano",0,Misc.
+471,98,"Giga, for violin and piano, P.15b",0,Misc.
+472,98,"Sarabanda, for violin and piano, P.15a",0,Misc.
+473,98,"Violin Sonata in B minor, P.110",0,Sonata
+474,98,"Violin Sonata in D minor, P.15",0,Sonata
+475,99,"Sonatina, for violin and piano",0,Misc.
+476,99,"Three Spirals, for violin and piano",0,Misc.
+477,99,"Variations, for violin with piano",0,Misc.
+478,100,"Violin Phase, for violin and tape",0,Misc.
+479,101,"Mazurka-Oberek, for violin and piano in D",0,Misc.
+480,101,"Meditation, for violin and piano in D major, op. 32",0,Misc.
+481,102,"Melismata, for violin",0,Misc.
+482,103,"Ukranian Dance, for violin and piano",0,Misc.
+483,104,"9 Landler for Violin, D.370",0,Misc.
+484,104,"Bagatelle for Violin and Piano, op. 13, no. 9, ""Die Biene""",0,Misc.
+485,104,"Fantasia in C for Violin and Piano, D.934, op. posth.159, ""Sei mir gegrüsst!""",0,Misc.
+486,104,"Rondo for Violin and Piano in B minor, D. 895, op. 70, ""Rondeau brillant""",0,Misc.
+487,104,"Violin Sonata in A major, op. 162, D.574",0,Sonata
+488,104,"Violin Sonata  in A minor, D.385, op.  posth.137, no. 2",0,Sonata
+489,104,"Violin Sonata  in D major, D.384, op. posth.137, no. 1",0,Sonata
+490,104,"Violin Sonata  in G minor, D.408, op. posth.137, no. 3",0,Sonata
+491,105,"Swedish Dances, 15 pieces in 2 books for violin and piano, op. 63",0,Misc.
+492,106,"5 Melodies for Violin and Piano, op. 35bis",0,Misc.
+493,106,Serenade for Violin and Piano,0,Misc.
+494,106,"Sonata for Solo Violin in D major, op. 115",1,Sonata
+495,106,"Violin Sonata no. 1 in F minor, op. 80",0,Sonata
+496,106,"Violin Sonata no. 2 in D major, op. 94bis",0,Sonata
+497,107,"2 Pieces for Violin and Piano, op. 2",0,Misc.
+498,107,"3 Pieces for Violin and Piano, op. 116",0,Misc.
+499,107,"4 Pieces for Violin and Piano, op. 78",0,Misc.
+500,107,"4 Pieces for Violin and Piano, op. 115",0,Misc.
+501,107,"5 Pieces for Violin and Piano, op. 81",0,Misc.
+502,107,"6 Pieces for Violin and Piano, op. 79",0,Misc.
+503,107,"A Happy Musician, for solo violin",1,Misc.
+504,107,"Allegretto in A major, for solo violin, JS deest",1,Misc.
+505,107,"Impromptu in G minor, for solo violin, JS deest",1,Misc.
+506,107,"Mazurka in C major, for solo violin, JS deest",1,Misc.
+507,107,"Moderato-Maestoso in E flat major, for violin and piano, JS 132",0,Misc.
+508,107,Violin Sonata in A minor,0,Sonata
+509,107,"Violin Sonata in F major, JS 178",0,Sonata
+510,108,Sonata for Violin Solo in E minor,1,Sonata
+511,109,"2 Pieces for Violin and Piano, op. 6",0,Misc.
+512,110,"4 Romantic Pieces, for violin and piano, op. 75",0,Misc.
+513,110,"Ballad in D minor, for violin and piano, B.139, op. 15, no. 1",0,Misc.
+514,110,"Mazurek, for violin and piano, op. 49",0,Misc.
+515,110,"Violin Sonata in F major, B.106, op. 57",0,Sonata
+516,110,"Violin Sonatina in G major, op. 100",0,Misc.
+517,111,"Violin Sonata in B flat major, H.513, Wq.77",0,Sonata
+518,111,"Violin Sonata in B flat major, H.543",0,Sonata
+519,111,"Violin Sonata in B minor, Wq.76, H.512",0,Sonata
+520,111,"Violin Sonata in C major, Wq.73",0,Sonata
+521,111,"Violin Sonata in C minor, H.514, Wq.78",0,Sonata
+522,111,"Violin Sonata in C minor, H.579, Wq.161, no. 1",0,Sonata
+523,111,"Violin Sonata in D major, H.502, Wq.71",0,Sonata
+524,112,Duo for Violin and Piano in D major,0,Misc.
+525,112,Duo for Violin and Piano in D minor,0,Misc.
+526,113,"Violin Sonata no. 21 in E minor, K.304",0,Sonata
+527,113,"Violin Sonata no. 35 in A major, K.526",0,Sonata
+528,113,"Violin Sonata no. 1 in C major, K.6",0,Sonata
+529,113,"Violin Sonata no. 2 in D major, K.7",0,Sonata
+530,113,"Violin Sonata no. 3 in B flat major, K.8",0,Sonata
+531,113,"Violin Sonata no. 4 in G major, K.9",0,Sonata
+532,113,"Violin Sonata no. 5 in B flat major, K.10",0,Sonata
+533,113,"Violin Sonata no. 6 in G major, K.11",0,Sonata
+534,113,"Violin Sonata no.  7 in A major, K.12",0,Sonata
+535,113,"Violin Sonata no. 8 in F major, K.13",0,Sonata
+536,113,"Violin Sonata no. 9 in C major, K.14",0,Sonata
+537,113,"Violin Sonata no. 10 in B flat major, K.15",0,Sonata
+538,113,"Violin Sonata no. 11 in E flat major, K.26",0,Sonata
+539,113,"Violin Sonata no. 12 in G major, K.27",0,Sonata
+540,113,"Violin Sonata no. 13 in C major, K.28",0,Sonata
+541,113,"Violin Sonata no. 14 in D major, K.29",0,Sonata
+542,113,"Violin Sonata no. 15 in F major, K. 30",0,Sonata
+543,113,"Violin Sonata no. 16 in B flat major, K.31",0,Sonata
+544,113,"Violin Sonata no. 17 in C major, K.296",0,Sonata
+545,113,"Violin Sonata no. 18 in G major, K.301",0,Sonata
+546,113,"Violin Sonata no. 19 in E flat major, K.302",0,Sonata
+547,113,"Violin Sonata no. 20 in C major, K.303",0,Sonata
+548,113,"Violin Sonata no. 22 in A major, K.305",0,Sonata
+549,113,"Violin Sonata no. 23 in D major, K.306",0,Sonata
+550,113,"Violin Sonata no. 24 in F major, K.376",0,Sonata
+551,113,"Violin Sonata no. 25 in F major, K.377",0,Sonata
+552,113,"Violin Sonata no. 26 in B flat major, K.378",0,Sonata
+553,113,"Violin Sonata no. 27 in G major, K.379",0,Sonata
+554,113,"Violin Sonata no. 28 in E flat major, K.380",0,Sonata
+555,113,"Violin Sonata no. 29 in A major, K.402",0,Sonata
+556,113,"Violin Sonata no. 30 in C major, K.403",0,Sonata
+557,113,"Violin Sonata no. 31 in C major, K.404",0,Sonata
+558,113,"Violin Sonata no. 32 in B flat major, K.454",0,Sonata
+559,113,"Violin Sonata no. 33 in E flat major, K.481",0,Sonata
+560,113,"Violin Sonata no. 36 in F major, K.547, ""For Beginners""",0,Sonata
+561,114,"2 Waltzes, S.208a, for violin and piano",0,Misc.
+562,114,"Benedictus and Offertorium, for violin and piano, S.381, R.465",0,Misc.
+563,114,"Die drei Zigeuner, for violin and piano, S.383",0,Misc.
+564,114,"Duo Sonata, for violin and piano, S.127",0,Sonata
+565,114,"Elegie no. 1, for violin, piano and harmonium, S.130ter",0,Misc.
+566,114,"Elegie no. 2, for violin  and piano, S.131",0,Misc.
+567,114,"Epithalam zu Eduard Reményis Vermählungsfeier, for violin and piano, S.129",0,Misc.
+568,114,"Grand Duo concertant sur la Romance de 'Le Marin', for violin and piano, S.128 and S.700h",0,Misc.
+569,114,"La Lugubre gondola, for violin and piano, S.134bis",0,Misc.
+570,114,"La notte, for violin and piano, S.377a",0,Misc.
+571,115,"Berceuse - Petite reine, for violin and piano",0,Misc.
+572,115,"Etudes caracteristiques, for solo violin, op. 24",1,Misc.
+573,115,"Mazurka, for violin and piano",0,Misc.
+574,115,"Romance for Violin and Piano in C minor, op. 1",0,Misc.
+575,115,"Violin Sonata in E minor, op. 82",0,Sonata
+576,116,"Prelude, for violin  solo in G minor, ZN 773",0,Misc.
+577,116,"Prelude in G minor for Solo Violin, Z.773",1,Misc.
+578,117,"Sonata for Solo Violin, H.143",1,Sonata
+579,117,"Violin Sonata in D minor, H.3",0,Sonata
+580,117,"Violin Sonata no. 1, H.17",0,Sonata
+581,117,"Violin Sonata no. 2, H.24",0,Sonata
+582,118,"Violin Sonata, FP119",0,Sonata
+583,119,"3 Miniatures, for violin and piano",0,Misc.
+584,119,La Follia Per Violino Solo,0,Misc.
+585,119,"Sonata no. 1, for violin and piano",0,Sonata
+586,119,Violin Sonata no. 1,0,Sonata
+587,119,Violin Sonata no. 2,0,Sonata
+588,120,"German Dance, for violin and piano",0,Misc.
+589,121,"Theme and 5 Variations in E major, for violin and piano",0,Misc.
+590,122,"Z domoviny, 2 pieces for violin and piano, JB 1:118",0,Misc.
+591,123,"Distance de fée, for violin and piano, SJ1050",0,Misc.
+592,123,"Elegy, for violin and piano",0,Misc.
+593,124,"2 Esbozos, for violin and piano",0,Misc.
+594,124,"7 Cançons Valencianes, for violin and piano",0,Misc.
+595,124,"Capriccio, for violin",0,Misc.
+596,124,"Sonata pimpante, for violin and piano",0,Sonata
+597,125,Violin Sonata no. 1,0,Sonata
+598,125,Violin Sonata no. 2,0,Sonata
+599,125,Violin Sonata no. 3,0,Sonata
+600,125,Violin Sonata no. 4: Children's Day At the Camp Meeting,0,Sonata
+601,126,"Sonata-Monologue, for solo violin",1,Sonata
+602,126,"Song-Poem, ‘In Honour of an Ashugh’, for violin and piano",0,Misc.
+603,126,"Violin Sonata in G minor, op. 1",0,Sonata
