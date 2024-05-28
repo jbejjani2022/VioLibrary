@@ -9,7 +9,7 @@ import csv
 
 # load in the movie ratings and return dataset
 def load_dataset():
-    reader = Reader(line_format = 'user item rating timestamp', sep=',', skip_lines=1)
+    reader = Reader(line_format = 'user item rating', sep=',', skip_lines=1)
     ratings_dataset = Dataset.load_from_file('ml-latest-small/ratings.csv', reader=reader)
     
     # Lookup a movie's name with its Movielens ID as key
@@ -30,7 +30,7 @@ dataset, movieID_to_name = load_dataset()
 trainset = dataset.build_full_trainset()
 
 sim_options = {
-    'name': 'cosine',
+    'name': 'MSD',
     'user_based': False # using item-based collaborative filtering
 }
 
@@ -40,7 +40,7 @@ similarity_matrix = algo.compute_similarities()
 
 # Pick a user ID (numeric string)
 # Find the recommendations for that user
-test_user = '500'
+test_user = '2'
 
 # Get recommended items based off of similarity to the user's K top-rated items
 k = 20
@@ -59,12 +59,15 @@ candidates = defaultdict(float)
 # find the items most similar to k_neighbors - these are our recommendation candidates
 for itemID, rating in k_neighbors:
     try:
+        print("neighbor: ", itemID, rating)
         similarities = similarity_matrix[itemID]
+        print(f'{len(similarities)} similarities')
+        print("similarity scores: ", similarities)
         for innerID, score in enumerate(similarities):
             candidates[innerID] += score * (rating / 5.0) # the higher the rating, the more we weight the similar candidate
     except:
+        print("fail")
         continue
-    
     
 def getMovieName(movieID):
     if int(movieID) in movieID_to_name:
