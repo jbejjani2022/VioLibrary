@@ -34,26 +34,17 @@ class Recommender():
             return self.workID_to_name[int(workID)]
         else:
             return ""
-    
-    def get_user_recommendations(self, user):
-        """Get the k works that are most similar to 
-        the user's current favorited works and are not
-        already favorited
+        
+    def get_k_nearest(self, works):
+        """Get the k works that are most similar 
+        to `works` and are not already in `works`
 
         Args:
-            user (int): user id
+            works (numpy.ndarray): array of work ids
         """
-        # Construct the relative path to api.db file
-        db = os.path.join("..", "api.db")
-        convert_db_to_csv(db, 'favorites')
-        
-        favorites_df = pd.read_csv('data/favorites.csv')
-        # List of `work_id`s in the `user`'s favorites
-        favorited_works = favorites_df.loc[favorites_df['user_id'] == user, 'work_id'].values
-        
-        # Get the similarities of each work to each of the favorited works
+        # Get the similarities of each work to each of the library works
         # list of lists
-        similarities = [self.similarity_matrix.iloc[id] for id in favorited_works]
+        similarities = [self.similarity_matrix.iloc[id] for id in works]
         
         # Flatten the list while keeping track of the original index of each work 
         flattened_similarities = []
@@ -68,7 +59,7 @@ class Recommender():
         k_nearest = []
         for work in neighbors:
             # Only recommend a work if it is not already in favorites
-            if not work[1] in favorited_works:
+            if not work[1] in works:
                 k_nearest.append(work)
                 count += 1
                 if count == self.k: break
@@ -79,13 +70,51 @@ class Recommender():
         
         # Recommendations are a list of (source, rec) tuples,
         # where source is the favorited work that is closest to the rec
-        recommendations = [(self.getWorkName(favorited_works[neighbor[0]]), self.getWorkName(neighbor[1])) for neighbor in k_nearest]
+        recommendations = [(self.getWorkName(works[neighbor[0]]), self.getWorkName(neighbor[1])) for neighbor in k_nearest]
 
         return recommendations
     
+    def get_user_favorites_recommendations(self, user):
+        """Get the k works that are most similar to 
+        the user's current favorited works and are not
+        already favorited
+
+        Args:
+            user (int): user id
+        """
+        # Get most up to date favorites data
+        db = os.path.join("..", "api.db")
+        convert_db_to_csv(db, 'favorites')
+        
+        favorites_df = pd.read_csv('data/favorites.csv')
+        # List of `work_id`s in the `user`'s favorites
+        favorited_works = favorites_df.loc[favorites_df['user_id'] == user, 'work_id'].values
+        
+        return self.get_k_nearest(favorited_works)
+
+    
+    def get_user_library_recommendations(self, user, library):
+        """Get the k works that are most similar to 
+        the works in the user's library and are not already
+        in the library
+
+        Args:
+            user (int): user id
+            library (string): name of library
+        """
+        # Get most up to date libraries data
+        db = os.path.join("..", "api.db")
+        convert_db_to_csv(db, 'libraries')
+        
+        libs_df = pd.read_csv('data/libraries.csv')
+        # List of `work_id`s in the `user`'s library
+        lib_works = libs_df.loc[(libs_df['user_id'] == user) & (libs_df['lib_name'] == library), 'work_id'].values
+        
+        return self.get_k_nearest(lib_works)
 
 if __name__ == '__main__':
     recommender = Recommender(5)
-    recommendations = recommender.get_user_recommendations(2)
+    # recommendations = recommender.get_user_favorites_recommendations(2)
+    recommendations = recommender.get_user_library_recommendations(2, 'bach')
     for i, rec in enumerate(recommendations):
         print(f'Rec {i}: {rec[1]}, from {rec[0]}')
