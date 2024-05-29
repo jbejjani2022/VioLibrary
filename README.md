@@ -1,21 +1,23 @@
 # **VioLibrary**
 
 ## **About**
-VioLibrary is a tool for finding violin recital repertoire and brainstorming and building recital programs.
+VioLibrary is a web tool that makes it easy to search for violin recital repertoire and brainstorm and build recital programs.
+Apply a range of search filters to find works that fit your interests and needs; add works to your favorites page; get 
+personalized recommendations for new works to explore; and create custom libraries to group works together.
 
 
 # **How to Run**
 
-Included in our `project.zip` is the `api.db` database, which already contains the relevant data for the project which we have retrieved from the [OpenOpus](https://openopus.org) API. So, no setup is necessary to run and test our project.
+The `api.db` database file already contains the relevant data for the project which we have retrieved from the [OpenOpus](https://openopus.org) API. No setup is necessary to run and test our project.
 
-Use the project by simply running flask (with `flask run`) within the project directory and opening the link in your browser.
+Use the project by installing the dependencies in `requirements.txt` and running flask (via `flask run`) within the project directory. Then, open the provided link to the local server in your browser.
 
-The user can then register for a new account by entering a username (that has not already been taken) and a password. The password must be at least 8 characters long, has at least 1 lowercase, 1 uppercase, and 1 special symbol or number.
+The user can then register for a new account by entering a username (that has not already been taken) and a password. The password must be at least 8 characters long, have at least 1 lowercase, 1 uppercase, and 1 special symbol or number.
 
 
 # **Using VioLibrary**
 
-While logged in, the user can perform the following basic tasks:
+While logged in, the user can perform the following tasks:
 
 
 ## **Search**
@@ -23,7 +25,7 @@ On the homepage of the site, the user can search for violin works using the sear
 
 
 ## **Favorite**
-The user can add a work to their favorites using the dropdown bar under the results table. The dropdown lists all of the works shown in the search results table. The user can then select a work and click confirm to favorite it. Errors are displayed if the work has already been favorited or if no work was selected before clicking confirm. Once favorited, a work appears in the favorites page, which the user can access through the nav-bar at the top of the site. On the favorites page, the user can use a dropdown to unfavorite a work, removing it from the favorites table.
+The user can add a work to their favorites using the dropdown bar under the results table. The dropdown lists all of the works shown in the search results table. The user can then select a work and click confirm to favorite it. Errors are displayed if the work has already been favorited or if no work was selected before clicking confirm. Once favorited, a work appears in the favorites page, which the user can access through the nav-bar at the top of the site. On the favorites page, the user can unfavorite a work by clicking its `-` button, removing it from the favorites table.
 
 
 ## **Libraries**
@@ -33,4 +35,4 @@ The user can access the libraries page by clicking “Libraries” on the nav-ba
 ## **Other Actions**
 The user can click the button displaying their username in the top right corner of the site to show two more actions: Change Password and Log Out. Clicking Change Password brings the user to a page where they can change their password. Clicking Log Out will immediately log the user out and bring them to the log in page. Clicking the info button in the top right will display a modal with information about the site.
 
-Video URL: [https://youtu.be/Bs6iXfBvb1s](https://youtu.be/Bs6iXfBvb1s)
+Here is a video demonstration of the original version of VioLibrary, before I implemented the recommender system and a variety of additional functionality upgrades and UI/UX improvements: [https://youtu.be/Bs6iXfBvb1s](https://youtu.be/Bs6iXfBvb1s)
