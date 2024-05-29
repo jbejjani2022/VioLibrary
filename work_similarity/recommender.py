@@ -58,9 +58,10 @@ class Recommender():
         count = 0
         k_nearest = []
         for work in neighbors:
+            id = work[1]
             # Only recommend a work if it is not already in favorites
-            if not work[1] in works:
-                k_nearest.append(work)
+            if not id in works and not id in k_nearest:
+                k_nearest.append(id)
                 count += 1
                 if count == self.k: break
         
@@ -72,9 +73,8 @@ class Recommender():
         # let recommendations be a list of (source, rec) tuples,
         # where source is the favorited work that is closest to the rec
         # recommendations = [(self.getWorkName(works[neighbor[0]]), self.getWorkName(neighbor[1])) for neighbor in k_nearest]
-        recommendations = [neighbor[1] for neighbor in k_nearest]
 
-        return recommendations
+        return k_nearest
     
     def get_user_favorites_recommendations(self, user):
         """Get the k works that are most similar to 

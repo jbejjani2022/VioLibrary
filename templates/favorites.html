@@ -14,7 +14,7 @@
             <th class="text-start">Composer</th>
             <th class="text-start">Title</th>
             <th class="text-start">Form</th>
-            <th class="text-start">Instrumentation</th>
+            <th class="data-cell">Instrumentation</th>
             <th class="text-end">Date Added</th>
             <th class="text-end"></th>
         </tr>
@@ -25,8 +25,14 @@
                 <td class="text-start">{{ favorite["composer"] }}</td>
                 <td class="text-start">{{ favorite["name"] }}</td>
                 <td class="text-start">{{ favorite["form"] }}</td>
-                <td class="text-start">{{ favorite["instr"] }}</td>
+                <td class="data-cell">{{ favorite["instr"] }}</td>
                 <td class="text-end">{{ favorite["date"] }}</td>
+                <td>
+                    <form action="/removefavorite" method="post">
+                        <input type="hidden" name="favorite" value="{{ favorite['work_id'] }}">
+                        <button type="submit" title="Remove from favorites">-</button>
+                    </form>
+                </td>
                 <td class="text-end">
 
                 </td>
@@ -34,18 +40,6 @@
         {% endfor %}
     </tbody>
 </table>
-
-<br>
-<form action="/removefavorite" method="post">
-    <label for="favorites">Unfavorite:</label>
-    <select name="favorite" id="favorite" required>
-        <option disabled selected>Select Work</option>
-        {% for favorite in favorites_info %}
-            <option value="{{ favorite['work_id'] }}">{{ favorite['name'] }}</option>
-        {% endfor %}
-    </select>
-    <button class="btn btn-secondary" type="submit" id="confirm">Confirm</button>
-</form>
 
 <br><br>
 <h3 style="font-size: 1.5rem;">Recommended</h3>
@@ -56,7 +50,7 @@
             <th class="text-start">Composer</th>
             <th class="text-start">Title</th>
             <th class="text-start">Form</th>
-            <th class="text-start">Instrumentation</th>
+            <th class="data-cell">Instrumentation</th>
             <th class="text-end"></th>
         </tr>
     </thead>
@@ -66,11 +60,11 @@
                 <td class="text-start">{{ rec["composer"] }}</td>
                 <td class="text-start">{{ rec["name"] }}</td>
                 <td class="text-start">{{ rec["form"] }}</td>
-                <td class="text-start">{{ rec["instr"] }}</td>
+                <td class="data-cell">{{ rec["instr"] }}</td>
                 <td>
                     <form action="/addfavorite" method="post">
                         <input type="hidden" name="favorite" value="{{ rec['work_id'] }}">
-                        <button type="submit">+</button>
+                        <button type="submit" title="Add to favorites">+</button>
                     </form>
                 </td>
                 <td class="text-end">

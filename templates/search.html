@@ -13,25 +13,25 @@
     <form action="/" method="post" id="search-form">
         <h4>Search</h4>
         <br>
-        Title: <input type="text" name="title">
+        Title: <input type="text" name="title" value="{{ title_input }}">
         <br><br>
         <label for="composer">Composer:</label>
         <select name="composer" id="composer">
             <option disabled selected></option>
             {% for composer in composers %}
-                <option value="{{ composer }}">{{ composer }}</option>
+                <option value="{{ composer }}" {% if composer == composer_input %}selected{% endif %}>{{ composer }}</option>
             {% endfor %}
         </select>
         <br><br>
-        Born between <input type="text" name="min_birth" pattern="\d*" maxlength="4" size="4"> and <input type="text" name="max_birth" pattern="\d*" maxlength="4" size="4">
+        Born between <input type="text" name="min_birth" pattern="\d*" maxlength="4" size="4" value="{{ birth_input[0] }}"> and <input type="text" name="max_birth" pattern="\d*" maxlength="4" size="4" value="{{ birth_input[1] }}">
         <br><br>
-        Died between <input type="text" name="min_death" pattern="\d*" maxlength="4" size="4"> and <input type="text" name="max_death" pattern="\d*" maxlength="4" size="4">
+        Died between <input type="text" name="min_death" pattern="\d*" maxlength="4" size="4" value="{{ death_input[0] }}"> and <input type="text" name="max_death" pattern="\d*" maxlength="4" size="4" value="{{ death_input[1] }}">
         <br><br>
         <label for="epoch">Epoch:</label>
         <select name="epoch" id="epoch">
             <option disabled selected></option>
             {% for epoch in epochs %}
-                <option value="{{ epoch }}">{{ epoch }}</option>
+                <option value="{{ epoch }}" {% if epoch == epoch_input %}selected{% endif %}>{{ epoch }}</option>
             {% endfor %}
         </select>
         <br><br>
@@ -39,7 +39,7 @@
         <select name="form" id="form">
             <option disabled selected></option>
             {% for form in forms %}
-                <option value="{{ form }}">{{ form }}</option>
+                <option value="{{ form }}" {% if form == form_input %}selected{% endif %}>{{ form }}</option>
             {% endfor %}
         </select>
         <br><br>
@@ -47,7 +47,7 @@
         <select name="instr" id="instr">
             <option disabled selected></option>
             {% for i in instr %}
-                <option value="{{ i }}">{{ i }}</option>
+                <option value="{{ i }}" {% if i == instr_input %}selected{% endif %}>{{ i }}</option>
             {% endfor %}
         </select>
         <br><br>
@@ -68,7 +68,7 @@
                 <th class="text-start">Composer</th>
                 <th class="text-start">Title</th>
                 <th class="text-start">Form</th>
-                <th class="text-start">Instrumentation</th>
+                <th class="data-cell">Instrumentation</th>
                 <th class="text-end"></th>
             </tr>
         </thead>
@@ -78,8 +78,8 @@
                     <td class="text-start">{{ composer_results[i] }}</td>
                     <td class="text-start">{{ list[i]["name"] }}</td>
                     <td class="text-start">{{ list[i]["form"] }}</td>
-                    <td class="text-start">
-                        {% if list[i]["solo"] == '1' %}
+                    <td class="data-cell">
+                        {% if list[i]["solo"] == 1 %}
                             Violin
                         {% else %}
                             Violin and Piano
@@ -94,7 +94,7 @@
     <br><br>
 
     <form action="/addfavorite" method="post">
-        <label for="favorites">Add favorite:</label>
+        <label for="favorites">Add to favorites:</label>
         <select name="favorite" id="favorite" required>
             <option disabled selected>Select Work</option>
             {% for work in list %}

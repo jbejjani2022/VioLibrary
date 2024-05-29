@@ -74,15 +74,14 @@ def login():
         session["user_id"] = rows[0]["id"]
         session["username"] = rows[0]["username"]
         
-        # Initialize the user's recommender system
-        session["recommender"] = Recommender(5)
+        initialize_session()
 
         # Redirect user to home page
         return redirect("/")
 
     else:
         return render_template("login.html")
-
+    
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
@@ -122,13 +121,30 @@ def register():
         session["user_id"] = id
         session["username"] = username
         
-        # Initialize the user's recommender system
-        session["recommender"] = Recommender(5)
+        initialize_session()
 
         return redirect("/")
     else:
         return render_template("register.html")
 
+
+def initialize_session():
+    # initialize session variables
+    # Initialize the user's recommender system
+    session["recommender"] = Recommender(5)
+    
+    # Initialize blank filter inputs
+    session['list'] = []
+    session['composer_results'] = []
+    session['libraries'] = []
+    session['title_input'] = ''
+    session['composer_input'] = ''
+    session['birth_input'] = ['', '']
+    session['death_input'] = ['', '']
+    session['epoch_input'] = ''
+    session['form_input'] = ''
+    session['instr_input'] = ''
+    
 
 @app.route("/changepassword", methods=["GET", "POST"])
 @login_required
@@ -186,12 +202,12 @@ def index():
         queries = []
         placeholders = []
 
-        # Work title; split them into individual words
-        piece_words = request.form.get("title").split()
-
+        title = request.form.get("title")
+        # Split work title into individual words
+        piece_words = title.split()
         # If user typed in query for title search
         if len(piece_words) != 0:
-            """words = []"""
+            session['title_input'] = title
             for i in range(len(piece_words)):
                 # Search query for each word
                 queries.append("SELECT * FROM works WHERE name LIKE ?")
@@ -204,6 +220,8 @@ def index():
             query = "SELECT works.* FROM works JOIN composers ON works.composer_id = composers.id WHERE composer_id = (SELECT composers.id FROM composers WHERE composers.name = ?)"
             queries.append(query)
             placeholders.append(composer)
+            # store input in session in order to preserve state of form inputs
+            session['composer_input'] = composer
 
         # If user chose birth year
         min_birth = request.form.get("min_birth")
@@ -212,12 +230,13 @@ def index():
             query = "SELECT works.* FROM works JOIN composers ON works.composer_id = composers.id WHERE works.composer_id IN (SELECT composers.id FROM composers WHERE composers.birthyear >= ?)"
             queries.append(query)
             placeholders.append(min_birth)
-
+            session['birth_input'][0] = min_birth
         if max_birth:
             max_birth = int(max_birth)
             query = "SELECT works.* FROM works JOIN composers ON works.composer_id = composers.id WHERE works.composer_id IN (SELECT composers.id FROM composers WHERE composers.birthyear <= ?)"
             queries.append(query)
             placeholders.append(max_birth)
+            session['birth_input'][1] = max_birth
 
         # If user chose death year
         min_death = request.form.get("min_death")
@@ -227,21 +246,24 @@ def index():
             query = "SELECT works.* FROM works JOIN composers ON works.composer_id = composers.id WHERE works.composer_id IN (SELECT composers.id FROM composers WHERE composers.deathyear >= ?)"
             queries.append(query)
             placeholders.append(min_death)
-
+            session['death_input'][0] = min_death
         if max_death:
             max_death = int(max_death)
             query = "SELECT works.* FROM works JOIN composers ON works.composer_id = composers.id WHERE works.composer_id IN (SELECT composers.id FROM composers WHERE composers.deathyear <= ?)"
             queries.append(query)
             placeholders.append(max_death)
+            session['death_input'][1] = max_death
 
         # If user chose instrumentation
         instr = request.form.get("instr")
         if instr == "Violin Solo":
             query = "SELECT * FROM works WHERE solo = 1"
             queries.append(query)
+            session['instr_input'] = instr
         if instr == "Violin and Piano":
             query = "SELECT * FROM works WHERE solo = 0"
             queries.append(query)
+            session['instr_input'] = instr
 
         # If user chose epoch
         epoch = request.form.get("epoch")
@@ -249,18 +271,14 @@ def index():
             query = "SELECT works.* FROM works JOIN composers ON works.composer_id = composers.id WHERE works.composer_id IN (SELECT composers.id FROM composers WHERE composers.epoch = ?)"
             queries.append(query)
             placeholders.append(epoch)
+            session['epoch_input'] = epoch
 
         # If user chose form
         form = request.form.get("form")
-        if form == "Sonata":
-            query = "SELECT * FROM works WHERE form = 'Sonata'"
+        if form:
+            query = f"SELECT * FROM works WHERE form = '{form}'"
             queries.append(query)
-        elif form == "Suite":
-            query = "SELECT * FROM works WHERE form = 'Suite'"
-            queries.append(query)
-        elif form == "Misc.":
-            query = "SELECT * FROM works WHERE form = 'Misc.'"
-            queries.append(query)
+            session['form_input'] = form
 
         # Combining all queries together
         final_query = ""
@@ -271,23 +289,25 @@ def index():
             if i <= len(queries) - 2:
                 final_query += " INTERSECT "
 
-        list = db.execute(final_query, *(placeholders[i] for i in range(len(placeholders))))  # Adding placeholders as arguments dynamically
-
-        # If user did not type in anything
-        if len(list) == 0:
-            return render_template("search.html", no_input=True, composers=composers_list, epochs=epochs_list, forms=forms_list, instr=instr_list)
+        if final_query:
+            list = db.execute(final_query, *(placeholders[i] for i in range(len(placeholders))))  # Adding placeholders as arguments dynamically
+            session['list'] = list
+        else:
+            # If user did not add any search terms
+            return render_index(no_input=True)
 
         # Works library only returns composer IDs; this part retrieves their names
         composer_results = []
         for i in range(len(list)):
             composer_results.append(db.execute("SELECT fullname FROM composers WHERE id = ?", list[i]["composer_id"])[0]["fullname"])
+        session['composer_results'] = composer_results
+        
+        libraries = libraries_list()[1]
+        session['libraries'] = libraries
 
-        names = libraries_list()[1]
-
-        return render_template("search.html", libraries=names, list=list, composer_results=composer_results, composers=composers_list, epochs=epochs_list, forms=forms_list, instr=instr_list)
-
+        return render_index()
     else:
-        return render_template("search.html", composers=composers_list, epochs=epochs_list, forms=forms_list, instr=instr_list)
+        return render_index()
 
 
 @app.route("/favorites", methods=["GET"])
@@ -306,8 +326,9 @@ def show_favorites():
     recommender = session["recommender"]
     recommended_works = recommender.get_user_favorites_recommendations(current)
     recs_info = get_works_info(recommended_works, favorites=False)
-    # for rec in recs_info:
-    #     print(rec['name'])
+    
+    for rec in recs_info:
+        print(rec['name'])
     
     # Render template
     return render_template("favorites.html", favorites_info=favorites_info, recs_info=recs_info)
@@ -323,23 +344,23 @@ def addfavorite():
 
     # Getting work id
     work_id = request.form.get("favorite")
+    
+    # Get the referrer URL
+    referrer = request.referrer
 
     # If no input
     if not work_id:
-        return render_template("search.html", no_favorite_input=True, composers=composers_list, epochs=epochs_list, forms=forms_list, instr=instr_list)
+        return render_index(no_favorite_input = True)
 
     # Get time of request
     time = datetime.now()
 
     # If already added to favorites
     if len(db.execute("SELECT * FROM favorites WHERE work_id = ? AND user_id = ?", int(work_id), current)) != 0:
-        return render_template("search.html", favorited=True, composers=composers_list, epochs=epochs_list, forms=forms_list, instr=instr_list)
+        return render_index(favorited = True)
 
     # Update SQL database
     db.execute("INSERT INTO favorites(user_id, work_id, year, month, day, hour, minute, second) VALUES (?, ?, ?, ?, ?, ?, ?, ?)", current, work_id, time.year, time.month, time.day, time.hour, time.minute, int(time.second))
-
-    # Get the referrer URL
-    referrer = request.referrer
     
     # Redirect back to the referring page
     if referrer:
@@ -470,3 +491,8 @@ def removelibrary():
     db.execute("DELETE FROM libraries WHERE lib_name = ? AND user_id = ?", lib_name, current)
 
     return redirect("/libraries")
+
+
+def render_index(no_input=False, no_favorite_input=False, favorited=False):
+    # render the search page, passing in all the current user inputs stored in the session
+    return render_template("search.html", title_input=session['title_input'], composer_input=session['composer_input'], birth_input=session['birth_input'], death_input=session['death_input'], epoch_input=session['epoch_input'], form_input=session['form_input'], instr_input=session['instr_input'], libraries=session['libraries'], list=session['list'], composer_results=session['composer_results'], no_input=no_input, no_favorite_input=no_favorite_input, favorited=favorited, composers=composers_list, epochs=epochs_list, forms=forms_list, instr=instr_list)
