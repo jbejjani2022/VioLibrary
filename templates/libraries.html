@@ -86,14 +86,48 @@
           <button class="btn btn-secondary" type="submit" id="confirm">Confirm</button>
         </form>
       </div>
-    </div>
-  </div>
-{% endfor %}
+
+<h3 style="font-size: 1.5rem;">Recommended</h3>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th class="text-start">Composer</th>
+            <th class="text-start">Title</th>
+            <th class="text-start">Form</th>
+            <th class="data-cell">Instrumentation</th>
+            <th class="text-end"></th>
+        </tr>
+    </thead>
+   <tbody>
+        {% for rec in recs_info[names[i]['lib_name']] %}
+            <tr>
+                <td class="text-start">{{ rec["composer"] }}</td>
+                <td class="text-start">{{ rec["name"] }}</td>
+                <td class="text-start">{{ rec["form"] }}</td>
+                <td class="data-cell">{{ rec["instr"] }}</td>
+                <td>
+                    <form action="/addtolibrary" method="post">
+                        <input type="hidden" name="work" value="{{ rec['work_id'] }}">
+                        <input type="hidden" name="library" value="{{ names[i]['lib_name'] }}">
+                        <button type="submit" title="Add to library">+</button>
+                    </form>
+                </td>
+                <td class="text-end">
+
+                </td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<br>
 </div>
+</div>
+<br>
 
-
-<br><br>
-
+{% endfor %}
+    
+</div>
 
 <br><br>
 <form action="/removelibrary" method="post">

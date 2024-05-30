@@ -144,6 +144,7 @@ def initialize_session():
     session['epoch_input'] = ''
     session['form_input'] = ''
     session['instr_input'] = ''
+    session['lib_recs_info'] = []
     
 
 @app.route("/changepassword", methods=["GET", "POST"])
@@ -392,11 +393,22 @@ def remove_favorite():
 @login_required
 def showlibraries():
     """Shows all existing libraries"""
-
+    # Getting user info
+    current = session["user_id"]
+    
     libraries = libraries_list()[0]
     names = libraries_list()[1]
+    lib_names = [name['lib_name'] for name in names]
+    
+    # names is list of dicts: [{'lib_name': , }], libraries is list of work dicts: [{'name': , 'composer':, }]
+    # Get recommendations for new works to add to each library
+    recommender = session["recommender"]
+    # recs is a dict with key = library name, value = list of recommended work_ids for that library
+    recs = {name: recommender.get_user_library_recommendations(current, name) for name in lib_names}
+    lib_recs_info = {k: get_works_info(v, favorites=False) for k, v in recs.items()}
+    session['lib_recs_info'] = lib_recs_info
 
-    return render_template("libraries.html", libraries=libraries, names=names)
+    return render_template("libraries.html", libraries=libraries, names=names, recs_info=session['lib_recs_info'])
 
 
 @app.route("/createlibrary", methods=["POST"])
@@ -414,7 +426,7 @@ def createlibrary():
         libraries = libraries_list()[0]
         names = libraries_list()[1]
 
-        return render_template("libraries.html", libraries=libraries, names=names, lib_exists=True)
+        return render_template("libraries.html", libraries=libraries, names=names, recs_info=session['lib_recs_info'], lib_exists=True)
 
     # Update SQL with empty table
     db.execute("INSERT INTO libraries(lib_name, user_id) VALUES(?, ?)", lib_name, current)
@@ -422,7 +434,7 @@ def createlibrary():
     return redirect("/libraries")
 
 
-@app.route("/addtolibrary", methods=["POST"])
+@app.route("/addtolibrary", methods=["POST", "GET"])
 @login_required
 def addtolibrary():
     """Adds work to library"""
@@ -433,17 +445,18 @@ def addtolibrary():
 
     # Getting user info
     current = session["user_id"]
+    referrer = request.referrer
 
     # If missing an input
     if not work_id or not lib_name:
-        return render_template("search.html", missing_input=True, composers=composers_list, epochs=epochs_list, forms=forms_list, instr=instr_list)
+        return render_index(missing_input=True)
 
     # Getting time
     time = datetime.now()
 
     # If work already in library
     if len(db.execute("SELECT * FROM libraries WHERE user_id = ? AND lib_name = ? AND work_id = ?", current, lib_name, work_id)) != 0:
-        return render_template("search.html", work_in_lib=True, composers=composers_list, epochs=epochs_list, forms=forms_list, instr=instr_list)
+        return render_index(work_in_lib=True)
 
     # If empty library
     if db.execute("SELECT work_id FROM libraries WHERE user_id = ? AND lib_name = ?", current, lib_name)[0]["work_id"] is None:
@@ -451,8 +464,12 @@ def addtolibrary():
     else:
         db.execute("INSERT INTO libraries(lib_name, user_id, work_id, year, month, day, hour, minute, second) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)", lib_name, current, work_id, time.year, time.month, time.day, time.hour, time.minute, int(time.second))
 
-    # Back to search page
-    return redirect("/")
+    # Redirect back to the referring page
+    if referrer:
+        return redirect(referrer)
+    else:
+        # Default redirect if referrer is not available
+        return redirect('/')
 
 
 @app.route("/removework", methods=["POST"])
@@ -493,6 +510,6 @@ def removelibrary():
     return redirect("/libraries")
 
 
-def render_index(no_input=False, no_favorite_input=False, favorited=False):
+def render_index(no_input=False, no_favorite_input=False, favorited=False, missing_input=False, work_in_lib=False):
     # render the search page, passing in all the current user inputs stored in the session
-    return render_template("search.html", title_input=session['title_input'], composer_input=session['composer_input'], birth_input=session['birth_input'], death_input=session['death_input'], epoch_input=session['epoch_input'], form_input=session['form_input'], instr_input=session['instr_input'], libraries=session['libraries'], list=session['list'], composer_results=session['composer_results'], no_input=no_input, no_favorite_input=no_favorite_input, favorited=favorited, composers=composers_list, epochs=epochs_list, forms=forms_list, instr=instr_list)
+    return render_template("search.html", title_input=session['title_input'], composer_input=session['composer_input'], birth_input=session['birth_input'], death_input=session['death_input'], epoch_input=session['epoch_input'], form_input=session['form_input'], instr_input=session['instr_input'], libraries=session['libraries'], list=session['list'], composer_results=session['composer_results'], work_in_lib=work_in_lib, missing_input=missing_input, no_input=no_input, no_favorite_input=no_favorite_input, favorited=favorited, composers=composers_list, epochs=epochs_list, forms=forms_list, instr=instr_list)

@@ -3,6 +3,7 @@ import os
 from work_similarity.compute_similarities import compute_similarity_matrix
 from work_similarity.utilities import convert_db_to_csv
 import csv
+import numpy as np
 # import heapq
 
 
@@ -44,7 +45,7 @@ class Recommender():
         """
         # Get the similarities of each work to each of the library works
         # list of lists
-        similarities = [self.similarity_matrix.iloc[id] for id in works]
+        similarities = [self.similarity_matrix.iloc[int(id)] for id in works]
         
         # Flatten the list while keeping track of the original index of each work 
         flattened_similarities = []
@@ -115,6 +116,9 @@ class Recommender():
         libs_df = pd.read_csv('work_similarity/data/libraries.csv')
         # List of `work_id`s in the `user`'s library
         lib_works = libs_df.loc[(libs_df['user_id'] == user) & (libs_df['lib_name'] == library), 'work_id'].values
+        print("lib_works: ", lib_works)
+        if np.isnan(lib_works).any():
+            return []
         
         return self.get_k_nearest(lib_works)
 
