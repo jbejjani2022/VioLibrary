@@ -38,5 +38,3 @@ On the favorites page, the user receives a list of 5 recommended works based on 
 
 ## **Other Actions**
 The user can click the button displaying their username in the top right corner of the site to show two more actions: Change Password and Log Out. Clicking Change Password brings the user to a page where they can change their password. Clicking Log Out will immediately log the user out and bring them to the log in page. Clicking the info button in the top right will display a modal with information about the site.
-
-Here is a video demonstration of the original version of VioLibrary, before I implemented the recommender system and a variety of additional functionality upgrades and UI/UX improvements: [https://youtu.be/Bs6iXfBvb1s](https://youtu.be/Bs6iXfBvb1s)
