@@ -9,7 +9,7 @@ By: Joey Bejjani and Enoch Li
 
 # **How to Run**
 
-The `api.db` database file already contains the relevant data for the project which we have retrieved from the [OpenOpus](https://openopus.org) API. No setup is necessary to run and test our project.
+The `api.db` database file already contains the relevant data for the project which we have retrieved from the [OpenOpus](https://openopus.org) API.
 
 Use the project by installing the dependencies in `requirements.txt` and running flask (via `flask run`) within the project directory. Then, open the provided link to the local server in your browser.
 
