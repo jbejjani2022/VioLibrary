@@ -3,7 +3,7 @@
 ## **About**
 VioLibrary is a web tool that makes it easy to search for violin recital repertoire and brainstorm and build recital programs.
 Apply a range of search filters to find works that fit your interests and needs; add works to your favorites page; get 
-personalized recommendations for new works to explore; and create custom libraries to group works together.
+personalized recommendations for new works to explore; and create custom libraries/programs to group works together.
 
 By: Joey Bejjani and Enoch Li
 
