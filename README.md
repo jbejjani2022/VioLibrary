@@ -13,13 +13,13 @@ The `api.db` database file already contains the relevant data for the project wh
 
 Use the project by installing the dependencies in `requirements.txt` and running flask (via `flask run`) within the project directory. Then, open the provided link to the local server in your browser.
 
-The user can then register for a new account by entering a username (that has not already been taken) and a password. The password must be at least 8 characters long, have at least 1 lowercase, 1 uppercase, and 1 special symbol or number.
-
-
 # **Using VioLibrary**
 
-While logged in, the user can perform the following tasks:
+## **Sign Up and Log In**
 
+The user can register for a new account by entering a username (that has not already been taken) and a password. The password must be at least 8 characters long, have at least 1 lowercase, 1 uppercase, and 1 special symbol or number.
+
+While logged in, the user can perform the following tasks:
 
 ## **Search**
 On the homepage of the site, the user can search for violin works using the search tool. After applying one or more filters, the user can hit search to see a table listing the works that match the data entered in the filters. A work must satisfy each of the filters to be displayed in the table. For example, selecting “Violin and Piano” in the “Form” filter and “Romantic” in the “Epoch” filter and clicking search will show works written in the romantic period for violin and piano. As another example, entering “partita no. 2” in the “Title” filter and clicking search will show works that have “partita,” “no.,” and “2” in their name, in any order. Selecting “Bach” in the “Composer” filter and “post-war” in the “Epoch” filter and clicking search will show no works as expected, since Bach is not a post-war composer. Note that the user only needs to type in a single value for birthyear and deathyear (i.e. the user need not type in a year range for the filter to work.)
