@@ -15,6 +15,8 @@ Use the project by installing the dependencies in `requirements.txt` and running
 
 # **Using VioLibrary**
 
+Here is a detailed description of the application's features and functionality.
+
 ## **Sign Up and Log In**
 
 The user can register for a new account by entering a username (that has not already been taken) and a password. The password must be at least 8 characters long, have at least 1 lowercase, 1 uppercase, and 1 special symbol or number.
